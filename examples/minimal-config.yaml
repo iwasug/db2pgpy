@@ -1,0 +1,31 @@
+# Minimal Configuration for DB2 to PostgreSQL Migration
+# This is the bare minimum required to run a migration
+
+# DB2 source database connection
+db2:
+  host: db2server.example.com
+  port: 50000
+  database: MYDB
+  user: db2user
+  password: changeme
+
+# PostgreSQL target database connection
+postgresql:
+  host: pgserver.example.com
+  port: 5432
+  database: mydb
+  user: pguser
+  password: changeme
+
+# Tables to migrate (REQUIRED)
+migration:
+  tables:
+    - CUSTOMERS
+    - ORDERS
+
+# All other settings will use defaults:
+# - batch_size: 1000
+# - parallel_workers: 1
+# - validation: enabled
+# - resume: enabled
+# - logging: INFO level to console and db2pgpy.log

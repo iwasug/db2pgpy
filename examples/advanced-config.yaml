@@ -1,0 +1,245 @@
+# Advanced Configuration for DB2 to PostgreSQL Migration
+# This file demonstrates all available configuration options
+
+# ============================================================================
+# DB2 Source Database Connection
+# ============================================================================
+db2:
+  # Required: DB2 server hostname or IP address
+  host: db2-prod.example.com
+  
+  # Required: DB2 server port (default: 50000)
+  port: 50000
+  
+  # Required: Database name
+  database: PRODDB
+  
+  # Required: Database user with read access
+  user: migration_user
+  
+  # Required: Database password (consider using environment variables)
+  password: ${DB2_PASSWORD}
+  
+  # Optional: Schema name to migrate from
+  # If not specified, uses user's default schema
+  schema: PROD_SCHEMA
+  
+  # Optional: Enable SSL/TLS connection (default: false)
+  ssl: true
+  
+  # Optional: Connection timeout in seconds (default: 30)
+  timeout: 60
+
+# ============================================================================
+# PostgreSQL Target Database Connection
+# ============================================================================
+postgresql:
+  # Required: PostgreSQL server hostname or IP address
+  host: pg-prod.example.com
+  
+  # Required: PostgreSQL server port (default: 5432)
+  port: 5432
+  
+  # Required: Database name
+  database: proddb
+  
+  # Required: Database user with write access
+  user: migration_user
+  
+  # Required: Database password (consider using environment variables)
+  password: ${PG_PASSWORD}
+  
+  # Optional: Target schema name (default: public)
+  schema: public
+  
+  # Optional: Enable SSL/TLS connection (default: false)
+  ssl: true
+  
+  # Optional: Connection timeout in seconds (default: 30)
+  timeout: 60
+
+# ============================================================================
+# Migration Configuration
+# ============================================================================
+migration:
+  # Required: List of tables to migrate
+  # Specify table names as they appear in DB2
+  tables:
+    - CUSTOMERS
+    - ORDERS
+    - ORDER_ITEMS
+    - PRODUCTS
+    - PRODUCT_CATEGORIES
+    - INVENTORY
+    - SUPPLIERS
+    - EMPLOYEES
+    - DEPARTMENTS
+    - ADDRESSES
+  
+  # Optional: List of tables to exclude from migration
+  # Useful when migrating an entire schema except specific tables
+  exclude_tables:
+    - TEMP_DATA
+    - AUDIT_LOG_OLD
+    - BACKUP_TABLE
+  
+  # Optional: Migration mode (default: full)
+  # Options: full, schema-only, data-only
+  mode: full
+  
+  # Optional: Number of rows per batch for data transfer (default: 1000)
+  # Larger values = faster but more memory usage
+  # Smaller values = slower but more stable
+  # Tune based on your network and data characteristics
+  batch_size: 5000
+  
+  # Optional: Number of parallel worker threads (default: 1)
+  # CAUTION: Use parallel workers carefully
+  # - Start with 1, increase gradually after testing
+  # - Too many workers can overwhelm databases
+  # - Consider database connection limits
+  parallel_workers: 4
+  
+  # Optional: Continue migration if errors occur (default: false)
+  # NOT RECOMMENDED for production
+  # Use for testing or non-critical data
+  continue_on_error: false
+
+# ============================================================================
+# Validation Configuration
+# ============================================================================
+validation:
+  # Optional: Enable post-migration validation (default: true)
+  # Highly recommended to verify data integrity
+  enabled: true
+  
+  # Optional: Validate row counts match (default: true)
+  row_count: true
+  
+  # Optional: Enable data sampling validation (default: true)
+  # Compares random samples of actual data
+  data_sampling: true
+  
+  # Optional: Number of rows to sample per table (default: 100)
+  # Larger sample = more thorough but slower
+  sample_size: 500
+
+# ============================================================================
+# Resume Configuration
+# ============================================================================
+resume:
+  # Optional: Enable resume capability (default: true)
+  # Allows restarting interrupted migrations from last checkpoint
+  enabled: true
+  
+  # Optional: Checkpoint file path (default: .db2pgpy_checkpoint.json)
+  # Stores migration progress state
+  checkpoint_file: /var/lib/db2pgpy/migration_state.json
+
+# ============================================================================
+# Logging Configuration
+# ============================================================================
+logging:
+  # Optional: Log level (default: INFO)
+  # Options: DEBUG, INFO, WARNING, ERROR, CRITICAL
+  # Use DEBUG for troubleshooting, INFO for normal operation
+  level: INFO
+  
+  # Optional: Log file path (default: db2pgpy.log)
+  # Set to null to disable file logging
+  file: /var/log/db2pgpy/migration.log
+  
+  # Optional: Enable console output (default: true)
+  # Set to false for background jobs
+  console: true
+  
+  # Optional: Log message format
+  # Uses Python logging format strings
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+
+# ============================================================================
+# Performance Tuning Tips
+# ============================================================================
+# 
+# 1. Batch Size:
+#    - Small tables (< 10K rows): 1000-5000
+#    - Medium tables (10K-1M rows): 5000-10000
+#    - Large tables (> 1M rows): 10000-50000
+#
+# 2. Parallel Workers:
+#    - Start with 1 worker
+#    - Test with 2-4 workers on non-production data
+#    - Monitor database CPU and connection usage
+#    - Consider database max_connections setting
+#
+# 3. Network:
+#    - Ensure low latency between DB2 and PostgreSQL servers
+#    - Use dedicated network if possible
+#    - Consider migrating during off-peak hours
+#
+# 4. Database Resources:
+#    - Monitor DB2 and PostgreSQL CPU, memory, I/O
+#    - Increase PostgreSQL shared_buffers if needed
+#    - Increase PostgreSQL maintenance_work_mem for index creation
+#    - Consider temporarily disabling PostgreSQL autovacuum during migration
+#
+# 5. Large Tables:
+#    - Migrate schema first (--schema-only)
+#    - Disable indexes and constraints
+#    - Migrate data (--data-only)
+#    - Recreate indexes and constraints
+#    - ANALYZE tables
+#
+# ============================================================================
+# Security Best Practices
+# ============================================================================
+#
+# 1. Passwords:
+#    - Use environment variables: ${DB2_PASSWORD}
+#    - Never commit passwords to version control
+#    - Use secret management tools (Vault, AWS Secrets Manager)
+#
+# 2. Network:
+#    - Enable SSL/TLS connections
+#    - Use VPN or private network
+#    - Restrict database firewall rules
+#
+# 3. Permissions:
+#    - Use dedicated migration user with minimal permissions
+#    - DB2: SELECT on tables, READ on SYSCAT views
+#    - PostgreSQL: CREATE on schema, INSERT on tables
+#    - Revoke permissions after migration
+#
+# 4. Audit:
+#    - Keep detailed logs
+#    - Review logs for security events
+#    - Archive logs for compliance
+#
+# ============================================================================
+# Common Use Cases
+# ============================================================================
+#
+# Schema-only migration:
+#   mode: schema-only
+#   # Or use CLI: --schema-only
+#
+# Data-only migration (assumes schema exists):
+#   mode: data-only
+#   # Or use CLI: --data-only
+#
+# Specific tables only:
+#   # Use CLI: --tables CUSTOMERS --tables ORDERS
+#
+# High-speed migration (large batch, multiple workers):
+#   batch_size: 50000
+#   parallel_workers: 8
+#
+# Safe migration (small batch, validation enabled):
+#   batch_size: 500
+#   parallel_workers: 1
+#   validation:
+#     enabled: true
+#     data_sampling: true
+#     sample_size: 1000
+#
+# ============================================================================
