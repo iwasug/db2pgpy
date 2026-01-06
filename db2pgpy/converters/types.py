@@ -23,12 +23,13 @@ class TypeConverter:
         "DECFLOAT": "NUMERIC",
         
         # String types
-        "CHAR": "CHAR",
-        "CHARACTER": "CHAR",
+        # Note: CHAR converted to VARCHAR to avoid padding/truncation issues
+        "CHAR": "VARCHAR",  # DB2 CHAR → PostgreSQL VARCHAR (safer for data migration)
+        "CHARACTER": "VARCHAR",
         "VARCHAR": "VARCHAR",
         "CHARACTER VARYING": "VARCHAR",
         "CLOB": "TEXT",
-        "GRAPHIC": "CHAR",  # DB2 graphic types (Unicode) -> Char
+        "GRAPHIC": "VARCHAR",  # DB2 graphic types (Unicode) → VARCHAR
         "VARGRAPHIC": "VARCHAR",
         "DBCLOB": "TEXT",
         "LONG VARCHAR": "TEXT",

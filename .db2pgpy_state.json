@@ -1,0 +1,4015 @@
+{
+  "phase": "not_started",
+  "completed_phases": [],
+  "tables": {
+    "ACCOUNTDEFAULTS": {
+      "rows_migrated": 7,
+      "total_rows": 7,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T19:40:38.063691"
+    },
+    "ACTION": {
+      "rows_migrated": 166,
+      "total_rows": 166,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T19:40:39.759667"
+    },
+    "ACTIONGROUP": {
+      "rows_migrated": 31,
+      "total_rows": 31,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T19:40:40.227333"
+    },
+    "ACTIONSCFG": {
+      "rows_migrated": 411,
+      "total_rows": 411,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T19:40:40.947628"
+    },
+    "ADDRESS": {
+      "rows_migrated": 1,
+      "total_rows": 1,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T19:40:41.274908"
+    },
+    "ALLWEATHERPRODUCTS": {
+      "rows_migrated": 314,
+      "total_rows": 314,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T19:40:43.509749"
+    },
+    "ALNDOMAIN": {
+      "rows_migrated": 1531,
+      "total_rows": 1000,
+      "percentage": 153.1,
+      "last_updated": "2026-01-06T19:40:44.954207"
+    },
+    "ALTITEM": {
+      "rows_migrated": 1,
+      "total_rows": 1,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T19:40:45.566361"
+    },
+    "AMCREW": {
+      "rows_migrated": 18,
+      "total_rows": 18,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T19:40:46.056954"
+    },
+    "AMCREWSTATHIS": {
+      "rows_migrated": 18,
+      "total_rows": 18,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T19:40:47.805053"
+    },
+    "AMCREWT": {
+      "rows_migrated": 6,
+      "total_rows": 6,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T19:40:48.219779"
+    },
+    "AMCTSTATHIST": {
+      "rows_migrated": 6,
+      "total_rows": 6,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T19:40:52.561297"
+    },
+    "ANALYTICDATASET": {
+      "rows_migrated": 6,
+      "total_rows": 6,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T19:40:53.693399"
+    },
+    "APIROUTE": {
+      "rows_migrated": 50,
+      "total_rows": 50,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T19:40:55.659484"
+    },
+    "APPDOCTYPE": {
+      "rows_migrated": 495,
+      "total_rows": 495,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T19:40:56.794875"
+    },
+    "APPLICATIONAUTH": {
+      "rows_migrated": 63841,
+      "total_rows": 1000,
+      "percentage": 6384.1,
+      "last_updated": "2026-01-06T19:41:20.421376"
+    },
+    "ASSET": {
+      "rows_migrated": 44773,
+      "total_rows": 1000,
+      "percentage": 4477.3,
+      "last_updated": "2026-01-06T19:42:27.899983"
+    },
+    "ASSETANCESTOR": {
+      "rows_migrated": 56961,
+      "total_rows": 1000,
+      "percentage": 5696.1,
+      "last_updated": "2026-01-06T19:42:50.428109"
+    },
+    "ASSETATTRIBUTE": {
+      "rows_migrated": 751,
+      "total_rows": 751,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T19:42:51.330550"
+    },
+    "ASSETFEATURE": {
+      "rows_migrated": 3145,
+      "total_rows": 1000,
+      "percentage": 314.5,
+      "last_updated": "2026-01-06T19:42:55.322338"
+    },
+    "ASSETFEATUREHIST": {
+      "rows_migrated": 6119,
+      "total_rows": 1000,
+      "percentage": 611.9,
+      "last_updated": "2026-01-06T19:43:00.772205"
+    },
+    "ASSETHIERARCHY": {
+      "rows_migrated": 389019,
+      "total_rows": 1000,
+      "percentage": 38901.9,
+      "last_updated": "2026-01-06T19:45:45.646077"
+    },
+    "ASSETHISTORY": {
+      "rows_migrated": 388514,
+      "total_rows": 1000,
+      "percentage": 38851.4,
+      "last_updated": "2026-01-06T19:49:45.912590"
+    },
+    "ASSETLOCRELATION": {
+      "rows_migrated": 777,
+      "total_rows": 777,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T19:49:49.763032"
+    },
+    "ASSETLOCRELHIST": {
+      "rows_migrated": 1656,
+      "total_rows": 1000,
+      "percentage": 165.6,
+      "last_updated": "2026-01-06T19:49:52.188670"
+    },
+    "ASSETLOCUSERCUST": {
+      "rows_migrated": 15,
+      "total_rows": 15,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T19:49:53.354003"
+    },
+    "ASSETMETER": {
+      "rows_migrated": 7311,
+      "total_rows": 1000,
+      "percentage": 731.1,
+      "last_updated": "2026-01-06T19:50:04.290815"
+    },
+    "ASSETSPEC": {
+      "rows_migrated": 174123,
+      "total_rows": 1000,
+      "percentage": 17412.3,
+      "last_updated": "2026-01-06T19:51:47.088236"
+    },
+    "ASSETSPECHIST": {
+      "rows_migrated": 318718,
+      "total_rows": 1000,
+      "percentage": 31871.8,
+      "last_updated": "2026-01-06T19:54:58.874857"
+    },
+    "ASSETSTATUS": {
+      "rows_migrated": 2,
+      "total_rows": 2,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T19:55:00.411918"
+    },
+    "ASSETTOPOCACHE": {
+      "rows_migrated": 15,
+      "total_rows": 15,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T19:55:01.340052"
+    },
+    "ASSETTRANS": {
+      "rows_migrated": 111756,
+      "total_rows": 1000,
+      "percentage": 11175.6,
+      "last_updated": "2026-01-06T19:56:19.887414"
+    },
+    "ASSIGNMENT": {
+      "rows_migrated": 56377,
+      "total_rows": 1000,
+      "percentage": 5637.7,
+      "last_updated": "2026-01-06T19:56:55.977631"
+    },
+    "ASTMSOVER": {
+      "rows_migrated": 6,
+      "total_rows": 6,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T19:56:57.686523"
+    },
+    "ATTRFORMULA": {
+      "rows_migrated": 1,
+      "total_rows": 1,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T19:56:59.600738"
+    },
+    "ATTRFORMULACOND": {
+      "rows_migrated": 1,
+      "total_rows": 1,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T19:57:00.091721"
+    },
+    "AUTOKEY": {
+      "rows_migrated": 111,
+      "total_rows": 111,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T19:57:03.174779"
+    },
+    "AUTOSCRIPT": {
+      "rows_migrated": 14,
+      "total_rows": 14,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T19:57:03.883569"
+    },
+    "AUTOSCRIPTSTATE": {
+      "rows_migrated": 14,
+      "total_rows": 14,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T19:57:04.540664"
+    },
+    "A_ASSET": {
+      "rows_migrated": 122674,
+      "total_rows": 1000,
+      "percentage": 12267.4,
+      "last_updated": "2026-01-06T19:58:53.711699"
+    },
+    "A_PM": {
+      "rows_migrated": 34446,
+      "total_rows": 1000,
+      "percentage": 3444.6,
+      "last_updated": "2026-01-06T19:59:24.620721"
+    },
+    "BBOARDAUDIENCE": {
+      "rows_migrated": 9,
+      "total_rows": 9,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T19:59:24.998464"
+    },
+    "BBSTATUSHISTORY": {
+      "rows_migrated": 17,
+      "total_rows": 17,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T19:59:25.669801"
+    },
+    "BILLTOSHIPTO": {
+      "rows_migrated": 1,
+      "total_rows": 1,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T19:59:26.055110"
+    },
+    "BIMATTRIBUTEMAP": {
+      "rows_migrated": 1,
+      "total_rows": 1,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T19:59:27.287922"
+    },
+    "BIMATTRIBUTEMAPENTRY": {
+      "rows_migrated": 1,
+      "total_rows": 1,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T19:59:27.962597"
+    },
+    "BIMATTRIBUTEMAPLIST": {
+      "rows_migrated": 1,
+      "total_rows": 1,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T19:59:28.519998"
+    },
+    "BIMCONFIGURATION": {
+      "rows_migrated": 2,
+      "total_rows": 2,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T19:59:30.135596"
+    },
+    "BIMFILTER": {
+      "rows_migrated": 2,
+      "total_rows": 2,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T19:59:30.425846"
+    },
+    "BIMFILTERENTRY": {
+      "rows_migrated": 13,
+      "total_rows": 13,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T19:59:30.899041"
+    },
+    "BIMSPECMAPENTRY": {
+      "rows_migrated": 3,
+      "total_rows": 3,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T19:59:37.579809"
+    },
+    "BIMTYPEMAP": {
+      "rows_migrated": 1,
+      "total_rows": 1,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T19:59:39.124626"
+    },
+    "BIMTYPEMAPLIST": {
+      "rows_migrated": 1,
+      "total_rows": 1,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T19:59:39.433564"
+    },
+    "BOOKMARK": {
+      "rows_migrated": 73,
+      "total_rows": 73,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T19:59:40.147280"
+    },
+    "BUDGETANALYSISAXIS": {
+      "rows_migrated": 10,
+      "total_rows": 10,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T19:59:41.800749"
+    },
+    "BULLETINBOARD": {
+      "rows_migrated": 86,
+      "total_rows": 86,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T19:59:47.528763"
+    },
+    "CALENDAR": {
+      "rows_migrated": 6,
+      "total_rows": 6,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T19:59:48.183982"
+    },
+    "CALENDARBREAK": {
+      "rows_migrated": 20,
+      "total_rows": 20,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T19:59:48.723945"
+    },
+    "CHARPOINTACTION": {
+      "rows_migrated": 912,
+      "total_rows": 912,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T19:59:50.495441"
+    },
+    "CHARTOFACCOUNTS": {
+      "rows_migrated": 217,
+      "total_rows": 217,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T19:59:51.067814"
+    },
+    "CI": {
+      "rows_migrated": 11,
+      "total_rows": 11,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T19:59:51.584799"
+    },
+    "CIRELATION": {
+      "rows_migrated": 7,
+      "total_rows": 7,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T19:59:52.120438"
+    },
+    "CIRELATIONHIS": {
+      "rows_migrated": 7,
+      "total_rows": 7,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T19:59:53.035523"
+    },
+    "CISPEC": {
+      "rows_migrated": 43,
+      "total_rows": 43,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T19:59:53.975903"
+    },
+    "CISPECHIS": {
+      "rows_migrated": 66,
+      "total_rows": 66,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T19:59:54.763840"
+    },
+    "CISTATUS": {
+      "rows_migrated": 11,
+      "total_rows": 11,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T19:59:55.255641"
+    },
+    "CLASSANCESTOR": {
+      "rows_migrated": 35953,
+      "total_rows": 1000,
+      "percentage": 3595.3,
+      "last_updated": "2026-01-06T20:00:12.098251"
+    },
+    "CLASSIFICATION": {
+      "rows_migrated": 18822,
+      "total_rows": 1000,
+      "percentage": 1882.2,
+      "last_updated": "2026-01-06T20:00:21.111652"
+    },
+    "CLASSSPEC": {
+      "rows_migrated": 3959,
+      "total_rows": 1000,
+      "percentage": 395.9,
+      "last_updated": "2026-01-06T20:00:23.512963"
+    },
+    "CLASSSPECUSEWITH": {
+      "rows_migrated": 4052,
+      "total_rows": 1000,
+      "percentage": 405.2,
+      "last_updated": "2026-01-06T20:00:25.853357"
+    },
+    "CLASSSTRUCTURE": {
+      "rows_migrated": 18875,
+      "total_rows": 1000,
+      "percentage": 1887.5,
+      "last_updated": "2026-01-06T20:00:34.649620"
+    },
+    "CLASSUSEWITH": {
+      "rows_migrated": 19350,
+      "total_rows": 1000,
+      "percentage": 1935.0,
+      "last_updated": "2026-01-06T20:00:41.258241"
+    },
+    "COLLECTDETAILS": {
+      "rows_migrated": 2,
+      "total_rows": 2,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:00:41.795305"
+    },
+    "COLLECTION": {
+      "rows_migrated": 1,
+      "total_rows": 1,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:00:42.849275"
+    },
+    "COMMLOG": {
+      "rows_migrated": 5777,
+      "total_rows": 1000,
+      "percentage": 577.7,
+      "last_updated": "2026-01-06T20:01:13.026231"
+    },
+    "COMMODITIES": {
+      "rows_migrated": 17189,
+      "total_rows": 1000,
+      "percentage": 1718.9,
+      "last_updated": "2026-01-06T20:01:21.419248"
+    },
+    "COMMTEMPLATE": {
+      "rows_migrated": 131,
+      "total_rows": 131,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:01:22.503200"
+    },
+    "COMMTEMPLATEDOCS": {
+      "rows_migrated": 1,
+      "total_rows": 1,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:01:23.484768"
+    },
+    "COMMTMPLTSENDTO": {
+      "rows_migrated": 113,
+      "total_rows": 113,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:01:24.212620"
+    },
+    "COMPANIES": {
+      "rows_migrated": 145,
+      "total_rows": 145,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:01:24.867813"
+    },
+    "COMPCONTACT": {
+      "rows_migrated": 92,
+      "total_rows": 92,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:01:26.021948"
+    },
+    "COMPCONTACTMSTR": {
+      "rows_migrated": 30,
+      "total_rows": 30,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:01:26.407972"
+    },
+    "COMPMASTER": {
+      "rows_migrated": 147,
+      "total_rows": 147,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:01:26.773543"
+    },
+    "CONDITION": {
+      "rows_migrated": 332,
+      "total_rows": 332,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:01:27.792188"
+    },
+    "CONTLINEASSET": {
+      "rows_migrated": 12583,
+      "total_rows": 1000,
+      "percentage": 1258.3,
+      "last_updated": "2026-01-06T20:01:38.698294"
+    },
+    "CONTRACT": {
+      "rows_migrated": 8,
+      "total_rows": 8,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:01:39.390203"
+    },
+    "CONTRACTASSET": {
+      "rows_migrated": 42,
+      "total_rows": 42,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:01:40.076463"
+    },
+    "CONTRACTAUTH": {
+      "rows_migrated": 7,
+      "total_rows": 7,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:01:41.057102"
+    },
+    "CONTRACTDEFAULT": {
+      "rows_migrated": 512,
+      "total_rows": 512,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:01:42.008928"
+    },
+    "CONTRACTLINE": {
+      "rows_migrated": 9,
+      "total_rows": 9,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:01:43.528168"
+    },
+    "CONTRACTPROPERTY": {
+      "rows_migrated": 80,
+      "total_rows": 80,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:01:44.364214"
+    },
+    "CONTRACTSTATUS": {
+      "rows_migrated": 17,
+      "total_rows": 17,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:01:45.702520"
+    },
+    "CONTRACTTYPE": {
+      "rows_migrated": 17,
+      "total_rows": 17,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:01:46.699365"
+    },
+    "COSTTYPE": {
+      "rows_migrated": 20,
+      "total_rows": 20,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:01:50.130210"
+    },
+    "CRAFT": {
+      "rows_migrated": 18,
+      "total_rows": 18,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:01:50.946417"
+    },
+    "CRAFTRATE": {
+      "rows_migrated": 28,
+      "total_rows": 28,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:01:51.464873"
+    },
+    "CRAFTSKILL": {
+      "rows_migrated": 28,
+      "total_rows": 28,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:01:51.885531"
+    },
+    "CRONTASKDEF": {
+      "rows_migrated": 76,
+      "total_rows": 76,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:01:52.339735"
+    },
+    "CRONTASKHISTORY": {
+      "rows_migrated": 17571,
+      "total_rows": 1000,
+      "percentage": 1757.1,
+      "last_updated": "2026-01-06T20:02:03.247739"
+    },
+    "CRONTASKINSTANCE": {
+      "rows_migrated": 98,
+      "total_rows": 98,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:02:03.660135"
+    },
+    "CRONTASKPARAM": {
+      "rows_migrated": 111,
+      "total_rows": 111,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:02:04.142843"
+    },
+    "CROSSOVERDOMAIN": {
+      "rows_migrated": 100,
+      "total_rows": 100,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:02:04.641381"
+    },
+    "CTRLCONDITION": {
+      "rows_migrated": 54,
+      "total_rows": 54,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:02:05.000418"
+    },
+    "CTRLCONDPROP": {
+      "rows_migrated": 74,
+      "total_rows": 74,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:02:05.411180"
+    },
+    "CTRLGROUP": {
+      "rows_migrated": 54,
+      "total_rows": 54,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:02:05.970154"
+    },
+    "CURRENCY": {
+      "rows_migrated": 13,
+      "total_rows": 13,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:02:06.888353"
+    },
+    "CXASSETCERTIFICATION": {
+      "rows_migrated": 34,
+      "total_rows": 34,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:02:08.330894"
+    },
+    "CXGR": {
+      "rows_migrated": 170,
+      "total_rows": 170,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:02:08.916631"
+    },
+    "CXINTMSG": {
+      "rows_migrated": 17566,
+      "total_rows": 1000,
+      "percentage": 1756.6,
+      "last_updated": "2026-01-06T20:02:26.963536"
+    },
+    "CXITEMGROUP": {
+      "rows_migrated": 93,
+      "total_rows": 93,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:02:27.445402"
+    },
+    "DEFAULTQUERY": {
+      "rows_migrated": 6,
+      "total_rows": 6,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:02:28.119223"
+    },
+    "DEPLOYEDASSET": {
+      "rows_migrated": 106,
+      "total_rows": 106,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:02:28.789918"
+    },
+    "DMCFGGROUP": {
+      "rows_migrated": 20,
+      "total_rows": 20,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:02:32.511903"
+    },
+    "DMCFGOBJECT": {
+      "rows_migrated": 96,
+      "total_rows": 96,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:02:33.260011"
+    },
+    "DMCOLLLOOKUPRULE": {
+      "rows_migrated": 7,
+      "total_rows": 7,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:02:37.247032"
+    },
+    "DMCOLLPKGEXCEPTION": {
+      "rows_migrated": 3,
+      "total_rows": 3,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:02:38.023501"
+    },
+    "DMCOLLRELRULE": {
+      "rows_migrated": 11,
+      "total_rows": 11,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:02:38.298982"
+    },
+    "DMCOLLRELRULECOLS": {
+      "rows_migrated": 12,
+      "total_rows": 12,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:02:39.307133"
+    },
+    "DMDEPENDENCY": {
+      "rows_migrated": 19,
+      "total_rows": 19,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:02:42.126995"
+    },
+    "DMMESSAGE": {
+      "rows_migrated": 35,
+      "total_rows": 35,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:02:43.647499"
+    },
+    "DMPACKAGE": {
+      "rows_migrated": 7,
+      "total_rows": 7,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:02:43.953695"
+    },
+    "DMPACKAGEDEF": {
+      "rows_migrated": 12,
+      "total_rows": 12,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:02:44.566078"
+    },
+    "DMPKGCFGGRPDEF": {
+      "rows_migrated": 13,
+      "total_rows": 13,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:02:45.864240"
+    },
+    "DMPKGCFGOBJDEF": {
+      "rows_migrated": 37,
+      "total_rows": 37,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:02:46.313940"
+    },
+    "DMPKGCMPSRCDEF": {
+      "rows_migrated": 1,
+      "total_rows": 1,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:02:47.171196"
+    },
+    "DMPKGDEFSTATUS": {
+      "rows_migrated": 29,
+      "total_rows": 29,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:02:47.759866"
+    },
+    "DMPKGDIST": {
+      "rows_migrated": 5,
+      "total_rows": 5,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:02:48.158441"
+    },
+    "DMPKGDISTTRACK": {
+      "rows_migrated": 7,
+      "total_rows": 7,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:02:48.969522"
+    },
+    "DMPKGDSTTRGT": {
+      "rows_migrated": 2,
+      "total_rows": 2,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:02:49.640187"
+    },
+    "DMPKGSTAGING": {
+      "rows_migrated": 45,
+      "total_rows": 45,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:02:52.951057"
+    },
+    "DMPKGSTATUS": {
+      "rows_migrated": 35,
+      "total_rows": 35,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:02:53.746945"
+    },
+    "DOCINFO": {
+      "rows_migrated": 37928,
+      "total_rows": 1000,
+      "percentage": 3792.8,
+      "last_updated": "2026-01-06T20:03:35.277942"
+    },
+    "DOCLINKS": {
+      "rows_migrated": 54030,
+      "total_rows": 1000,
+      "percentage": 5403.0,
+      "last_updated": "2026-01-06T20:04:05.709814"
+    },
+    "DOCTYPES": {
+      "rows_migrated": 8,
+      "total_rows": 8,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:04:06.411287"
+    },
+    "DPACOMPUTER": {
+      "rows_migrated": 68,
+      "total_rows": 68,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:04:07.155671"
+    },
+    "DPACPU": {
+      "rows_migrated": 57,
+      "total_rows": 57,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:04:08.593335"
+    },
+    "DPADISK": {
+      "rows_migrated": 144,
+      "total_rows": 144,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:04:09.443720"
+    },
+    "DPADISPLAY": {
+      "rows_migrated": 52,
+      "total_rows": 52,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:04:10.131066"
+    },
+    "DPALOGICALDRIVE": {
+      "rows_migrated": 80,
+      "total_rows": 80,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:04:12.251612"
+    },
+    "DPAMADAPTER": {
+      "rows_migrated": 59,
+      "total_rows": 59,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:04:12.597127"
+    },
+    "DPAMADPTVARIANT": {
+      "rows_migrated": 59,
+      "total_rows": 59,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:04:13.063623"
+    },
+    "DPAMEDIAADAPTER": {
+      "rows_migrated": 39,
+      "total_rows": 39,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:04:13.479987"
+    },
+    "DPAMMANUFACTURER": {
+      "rows_migrated": 315,
+      "total_rows": 315,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:04:14.500586"
+    },
+    "DPAMMANUVARIANT": {
+      "rows_migrated": 315,
+      "total_rows": 315,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:04:15.471885"
+    },
+    "DPAMOS": {
+      "rows_migrated": 23,
+      "total_rows": 23,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:04:15.987419"
+    },
+    "DPAMOSVARIANT": {
+      "rows_migrated": 23,
+      "total_rows": 23,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:04:16.390013"
+    },
+    "DPAMPROCESSOR": {
+      "rows_migrated": 13,
+      "total_rows": 13,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:04:16.845320"
+    },
+    "DPAMPROCVARIANT": {
+      "rows_migrated": 13,
+      "total_rows": 13,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:04:17.280629"
+    },
+    "DPAMSOFTWARE": {
+      "rows_migrated": 1982,
+      "total_rows": 1000,
+      "percentage": 198.2,
+      "last_updated": "2026-01-06T20:04:18.256670"
+    },
+    "DPAMSWSUITE": {
+      "rows_migrated": 1,
+      "total_rows": 1,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:04:18.600408"
+    },
+    "DPAMSWSUITECOMP": {
+      "rows_migrated": 3,
+      "total_rows": 3,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:04:19.985136"
+    },
+    "DPAMSWUSAGE": {
+      "rows_migrated": 1,
+      "total_rows": 1,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:04:21.326833"
+    },
+    "DPAMSWUSAGERANGE": {
+      "rows_migrated": 7,
+      "total_rows": 7,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:04:22.173886"
+    },
+    "DPAMSWVARIANT": {
+      "rows_migrated": 1982,
+      "total_rows": 1000,
+      "percentage": 198.2,
+      "last_updated": "2026-01-06T20:04:23.532565"
+    },
+    "DPANETADAPTER": {
+      "rows_migrated": 61,
+      "total_rows": 61,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:04:24.031523"
+    },
+    "DPANETDEVICE": {
+      "rows_migrated": 34,
+      "total_rows": 34,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:04:24.792140"
+    },
+    "DPANETPRINTER": {
+      "rows_migrated": 4,
+      "total_rows": 4,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:04:25.141644"
+    },
+    "DPAOS": {
+      "rows_migrated": 63,
+      "total_rows": 63,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:04:25.776235"
+    },
+    "DPASOFTWARE": {
+      "rows_migrated": 13031,
+      "total_rows": 1000,
+      "percentage": 1303.1,
+      "last_updated": "2026-01-06T20:04:39.867122"
+    },
+    "DPASWSUITE": {
+      "rows_migrated": 14,
+      "total_rows": 14,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:04:40.364666"
+    },
+    "DPATCPIP": {
+      "rows_migrated": 53,
+      "total_rows": 53,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:04:41.245695"
+    },
+    "DUMMY_TABLE": {
+      "rows_migrated": 1,
+      "total_rows": 1,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:04:42.789499"
+    },
+    "EMAIL": {
+      "rows_migrated": 1135,
+      "total_rows": 1000,
+      "percentage": 113.5,
+      "last_updated": "2026-01-06T20:04:44.119227"
+    },
+    "ESCALATION": {
+      "rows_migrated": 48,
+      "total_rows": 48,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:04:44.566616"
+    },
+    "ESCNOTIFICATION": {
+      "rows_migrated": 71,
+      "total_rows": 71,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:04:44.984431"
+    },
+    "ESCREFPOINT": {
+      "rows_migrated": 86,
+      "total_rows": 86,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:04:45.598903"
+    },
+    "ESCREPEATTRACK": {
+      "rows_migrated": 152,
+      "total_rows": 152,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:04:46.264388"
+    },
+    "ESCSTATUS": {
+      "rows_migrated": 1198653,
+      "total_rows": 1000,
+      "percentage": 119865.3,
+      "last_updated": "2026-01-06T20:16:59.962440"
+    },
+    "EXCLUDEDACTIONS": {
+      "rows_migrated": 14,
+      "total_rows": 14,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:17:01.993393"
+    },
+    "EXCLUDEDMAPAPPS": {
+      "rows_migrated": 9,
+      "total_rows": 9,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:17:03.393631"
+    },
+    "EXPFUNCTIONS": {
+      "rows_migrated": 33,
+      "total_rows": 33,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:17:05.512870"
+    },
+    "EXPLAIN_INSTANCE": {
+      "rows_migrated": 1,
+      "total_rows": 1,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:38:11.677889"
+    },
+    "EXPLAIN_OBJECT": {
+      "rows_migrated": 2,
+      "total_rows": 2,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:38:11.989856"
+    },
+    "EXPLAIN_OPERATOR": {
+      "rows_migrated": 3,
+      "total_rows": 3,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:38:14.741115"
+    },
+    "EXPLAIN_PREDICATE": {
+      "rows_migrated": 2,
+      "total_rows": 2,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:38:15.287827"
+    },
+    "EXPLAIN_STATEMENT": {
+      "rows_migrated": 3,
+      "total_rows": 3,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:38:16.529329"
+    },
+    "EXPLAIN_STREAM": {
+      "rows_migrated": 4,
+      "total_rows": 4,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:38:16.860681"
+    },
+    "FACONFIG": {
+      "rows_migrated": 1554,
+      "total_rows": 1000,
+      "percentage": 155.4,
+      "last_updated": "2026-01-06T20:38:17.856826"
+    },
+    "FAILURECODE": {
+      "rows_migrated": 2052,
+      "total_rows": 1000,
+      "percentage": 205.2,
+      "last_updated": "2026-01-06T20:38:23.099631"
+    },
+    "FAILURELIST": {
+      "rows_migrated": 3121,
+      "total_rows": 1000,
+      "percentage": 312.1,
+      "last_updated": "2026-01-06T20:38:25.557470"
+    },
+    "FAILUREREMARK": {
+      "rows_migrated": 1,
+      "total_rows": 1,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:38:26.073730"
+    },
+    "FAILUREREPORT": {
+      "rows_migrated": 1581,
+      "total_rows": 1000,
+      "percentage": 158.1,
+      "last_updated": "2026-01-06T20:38:27.204560"
+    },
+    "FEATURES": {
+      "rows_migrated": 6,
+      "total_rows": 6,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:38:29.325610"
+    },
+    "FEATURESPEC": {
+      "rows_migrated": 4,
+      "total_rows": 4,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:38:30.149890"
+    },
+    "FEATURESTATUS": {
+      "rows_migrated": 2,
+      "total_rows": 2,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:38:30.864450"
+    },
+    "FINANCIALPERIODS": {
+      "rows_migrated": 18,
+      "total_rows": 18,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:38:32.113093"
+    },
+    "FSNCLASS": {
+      "rows_migrated": 151,
+      "total_rows": 151,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:38:33.138557"
+    },
+    "FSNCLASSQUAL": {
+      "rows_migrated": 24,
+      "total_rows": 24,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:38:33.589324"
+    },
+    "FSNCLASSRELATION": {
+      "rows_migrated": 154,
+      "total_rows": 154,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:38:33.890501"
+    },
+    "FSNMETHOD": {
+      "rows_migrated": 45,
+      "total_rows": 45,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:38:34.496703"
+    },
+    "FSNMETHODPARAM": {
+      "rows_migrated": 56,
+      "total_rows": 56,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:38:35.615816"
+    },
+    "FSNMTHDPARAMQUAL": {
+      "rows_migrated": 56,
+      "total_rows": 56,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:38:36.234121"
+    },
+    "FSNMTHDQUAL": {
+      "rows_migrated": 118,
+      "total_rows": 118,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:38:37.565827"
+    },
+    "FSNOBJECT": {
+      "rows_migrated": 17,
+      "total_rows": 17,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:38:39.412209"
+    },
+    "FSNOBJPROPERTY": {
+      "rows_migrated": 179,
+      "total_rows": 179,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:38:40.124763"
+    },
+    "FSNPROPERTY": {
+      "rows_migrated": 2062,
+      "total_rows": 1000,
+      "percentage": 206.2,
+      "last_updated": "2026-01-06T20:38:43.261537"
+    },
+    "FSNPROPERTYQUAL": {
+      "rows_migrated": 97,
+      "total_rows": 97,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:38:44.120376"
+    },
+    "FSNPROVIDER": {
+      "rows_migrated": 22,
+      "total_rows": 22,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:38:45.962329"
+    },
+    "FSNQUALIFIER": {
+      "rows_migrated": 18,
+      "total_rows": 18,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:38:47.142279"
+    },
+    "FSNREFPROPERTY": {
+      "rows_migrated": 152,
+      "total_rows": 152,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:38:47.653214"
+    },
+    "FSNSCHEMA": {
+      "rows_migrated": 18,
+      "total_rows": 18,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:38:48.197389"
+    },
+    "FSNSQLCOLUMN": {
+      "rows_migrated": 2094,
+      "total_rows": 1000,
+      "percentage": 209.4,
+      "last_updated": "2026-01-06T20:38:49.621900"
+    },
+    "FSNSQLTABLE": {
+      "rows_migrated": 224,
+      "total_rows": 224,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:38:50.745700"
+    },
+    "FSNTABLEQUAL": {
+      "rows_migrated": 10,
+      "total_rows": 10,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:38:51.521927"
+    },
+    "GLCOMPONENTS": {
+      "rows_migrated": 416,
+      "total_rows": 416,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:38:54.657075"
+    },
+    "GLCONFIGURE": {
+      "rows_migrated": 14,
+      "total_rows": 14,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:38:55.020028"
+    },
+    "GROUPUSER": {
+      "rows_migrated": 2102,
+      "total_rows": 1000,
+      "percentage": 210.2,
+      "last_updated": "2026-01-06T20:38:56.529416"
+    },
+    "GRPREASSIGNAUTH": {
+      "rows_migrated": 285,
+      "total_rows": 285,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:38:57.043816"
+    },
+    "IMGLIB": {
+      "rows_migrated": 1000,
+      "total_rows": 1000,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:42:53.887473"
+    },
+    "INBXCONFIG": {
+      "rows_migrated": 7485,
+      "total_rows": 1000,
+      "percentage": 748.5,
+      "last_updated": "2026-01-06T20:49:03.890809"
+    },
+    "INSPECTIONFORM": {
+      "rows_migrated": 172,
+      "total_rows": 172,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:49:06.836810"
+    },
+    "INSPECTIONFORMSTATUS": {
+      "rows_migrated": 396,
+      "total_rows": 396,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:49:07.845100"
+    },
+    "INSPECTIONRESULT": {
+      "rows_migrated": 20131,
+      "total_rows": 1000,
+      "percentage": 2013.1,
+      "last_updated": "2026-01-06T20:49:20.802914"
+    },
+    "INSPFIELD": {
+      "rows_migrated": 4942,
+      "total_rows": 1000,
+      "percentage": 494.2,
+      "last_updated": "2026-01-06T20:49:26.218830"
+    },
+    "INSPFIELDOPTION": {
+      "rows_migrated": 4458,
+      "total_rows": 1000,
+      "percentage": 445.8,
+      "last_updated": "2026-01-06T20:49:28.506273"
+    },
+    "INSPFIELDRESULT": {
+      "rows_migrated": 51892,
+      "total_rows": 1000,
+      "percentage": 5189.2,
+      "last_updated": "2026-01-06T20:50:04.037491"
+    },
+    "INSPQUESTION": {
+      "rows_migrated": 1973,
+      "total_rows": 1000,
+      "percentage": 197.3,
+      "last_updated": "2026-01-06T20:50:08.409496"
+    },
+    "INSPRESULTSTATUS": {
+      "rows_migrated": 24067,
+      "total_rows": 1000,
+      "percentage": 2406.7,
+      "last_updated": "2026-01-06T20:50:20.954447"
+    },
+    "INVBALANCES": {
+      "rows_migrated": 7101,
+      "total_rows": 1000,
+      "percentage": 710.1,
+      "last_updated": "2026-01-06T20:50:25.689513"
+    },
+    "INVCOST": {
+      "rows_migrated": 6182,
+      "total_rows": 1000,
+      "percentage": 618.2,
+      "last_updated": "2026-01-06T20:50:29.598406"
+    },
+    "INVENTORY": {
+      "rows_migrated": 6178,
+      "total_rows": 1000,
+      "percentage": 617.8,
+      "last_updated": "2026-01-06T20:50:38.324723"
+    },
+    "INVLOT": {
+      "rows_migrated": 1172,
+      "total_rows": 1000,
+      "percentage": 117.2,
+      "last_updated": "2026-01-06T20:50:40.049956"
+    },
+    "INVOICE": {
+      "rows_migrated": 1,
+      "total_rows": 1,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:50:41.011394"
+    },
+    "INVOICECOST": {
+      "rows_migrated": 1,
+      "total_rows": 1,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:50:43.881299"
+    },
+    "INVOICELINE": {
+      "rows_migrated": 1,
+      "total_rows": 1,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:50:44.646819"
+    },
+    "INVOICEMATCH": {
+      "rows_migrated": 1,
+      "total_rows": 1,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:50:45.002608"
+    },
+    "INVOICESTATUS": {
+      "rows_migrated": 2,
+      "total_rows": 2,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:50:46.074886"
+    },
+    "INVRESERVE": {
+      "rows_migrated": 131,
+      "total_rows": 131,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:50:48.923424"
+    },
+    "INVSTATUS": {
+      "rows_migrated": 9731,
+      "total_rows": 1000,
+      "percentage": 973.1,
+      "last_updated": "2026-01-06T20:50:56.350816"
+    },
+    "INVTRANS": {
+      "rows_migrated": 12872,
+      "total_rows": 1000,
+      "percentage": 1287.2,
+      "last_updated": "2026-01-06T20:51:09.265885"
+    },
+    "INVUSE": {
+      "rows_migrated": 174,
+      "total_rows": 174,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:51:10.432506"
+    },
+    "INVUSELINE": {
+      "rows_migrated": 189,
+      "total_rows": 189,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:51:12.197381"
+    },
+    "INVUSELINESPLIT": {
+      "rows_migrated": 189,
+      "total_rows": 189,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:51:13.632406"
+    },
+    "INVUSESTATUS": {
+      "rows_migrated": 244,
+      "total_rows": 244,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:51:14.462191"
+    },
+    "INVVENDOR": {
+      "rows_migrated": 386,
+      "total_rows": 386,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:51:15.644807"
+    },
+    "IOTFHISTORIAN": {
+      "rows_migrated": 1,
+      "total_rows": 1,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:51:17.992366"
+    },
+    "ITEM": {
+      "rows_migrated": 5554,
+      "total_rows": 1000,
+      "percentage": 555.4,
+      "last_updated": "2026-01-06T20:51:23.803013"
+    },
+    "ITEMORGINFO": {
+      "rows_migrated": 5554,
+      "total_rows": 1000,
+      "percentage": 555.4,
+      "last_updated": "2026-01-06T20:51:28.348726"
+    },
+    "ITEMORGSTATUS": {
+      "rows_migrated": 5774,
+      "total_rows": 1000,
+      "percentage": 577.4,
+      "last_updated": "2026-01-06T20:51:31.144744"
+    },
+    "ITEMSPEC": {
+      "rows_migrated": 7393,
+      "total_rows": 1000,
+      "percentage": 739.3,
+      "last_updated": "2026-01-06T20:51:36.108176"
+    },
+    "ITEMSTATUS": {
+      "rows_migrated": 8947,
+      "total_rows": 1000,
+      "percentage": 894.7,
+      "last_updated": "2026-01-06T20:51:42.036944"
+    },
+    "ITEMSTRUCT": {
+      "rows_migrated": 5694,
+      "total_rows": 1000,
+      "percentage": 569.4,
+      "last_updated": "2026-01-06T20:51:47.331048"
+    },
+    "JOBITEM": {
+      "rows_migrated": 665,
+      "total_rows": 665,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:51:48.204724"
+    },
+    "JOBLABOR": {
+      "rows_migrated": 2935,
+      "total_rows": 1000,
+      "percentage": 293.5,
+      "last_updated": "2026-01-06T20:51:52.153740"
+    },
+    "JOBPLAN": {
+      "rows_migrated": 1113,
+      "total_rows": 1000,
+      "percentage": 111.3,
+      "last_updated": "2026-01-06T20:51:55.118618"
+    },
+    "JOBPLANCLASS": {
+      "rows_migrated": 2,
+      "total_rows": 2,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:51:55.627445"
+    },
+    "JOBTASK": {
+      "rows_migrated": 12861,
+      "total_rows": 1000,
+      "percentage": 1286.1,
+      "last_updated": "2026-01-06T20:52:08.552782"
+    },
+    "JPASSETSPLINK": {
+      "rows_migrated": 9373,
+      "total_rows": 1000,
+      "percentage": 937.3,
+      "last_updated": "2026-01-06T20:52:16.311902"
+    },
+    "JSONATTRIBUTEMAP": {
+      "rows_migrated": 394,
+      "total_rows": 394,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:52:18.427748"
+    },
+    "JSONMAPDETAIL": {
+      "rows_migrated": 5,
+      "total_rows": 5,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:52:19.583211"
+    },
+    "JSONMAPPING": {
+      "rows_migrated": 5,
+      "total_rows": 5,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:52:20.299366"
+    },
+    "JSONMAPPROPS": {
+      "rows_migrated": 6,
+      "total_rows": 6,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:52:20.717399"
+    },
+    "JSONOBJECTMAP": {
+      "rows_migrated": 20,
+      "total_rows": 20,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:52:24.015204"
+    },
+    "JSONRESOURCE": {
+      "rows_migrated": 9,
+      "total_rows": 9,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:52:24.891681"
+    },
+    "JSONRESOURCETYPE": {
+      "rows_migrated": 3,
+      "total_rows": 3,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:52:25.439439"
+    },
+    "KPIGCONFIG": {
+      "rows_migrated": 206,
+      "total_rows": 206,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:52:27.326797"
+    },
+    "KPIHISTORY": {
+      "rows_migrated": 23961,
+      "total_rows": 1000,
+      "percentage": 2396.1,
+      "last_updated": "2026-01-06T20:52:37.280532"
+    },
+    "KPILCONFIG": {
+      "rows_migrated": 331,
+      "total_rows": 331,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:52:38.077537"
+    },
+    "KPIMAIN": {
+      "rows_migrated": 28,
+      "total_rows": 28,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:52:38.730082"
+    },
+    "KPITEMPLATE": {
+      "rows_migrated": 6,
+      "total_rows": 6,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:52:41.694168"
+    },
+    "KPITEMPLATEMAIN": {
+      "rows_migrated": 30,
+      "total_rows": 30,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:52:42.829716"
+    },
+    "KPITEMPLATEVAR": {
+      "rows_migrated": 9,
+      "total_rows": 9,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:52:43.653871"
+    },
+    "KPITEMPLATEVARVALUE": {
+      "rows_migrated": 50,
+      "total_rows": 50,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:52:44.032655"
+    },
+    "KPITRENDCFG": {
+      "rows_migrated": 62,
+      "total_rows": 62,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:52:44.818727"
+    },
+    "LABOR": {
+      "rows_migrated": 66,
+      "total_rows": 66,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:52:45.848463"
+    },
+    "LABORCRAFTRATE": {
+      "rows_migrated": 71,
+      "total_rows": 71,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:52:48.710604"
+    },
+    "LABORQUAL": {
+      "rows_migrated": 4,
+      "total_rows": 4,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:52:49.930659"
+    },
+    "LABORQUALSTATUS": {
+      "rows_migrated": 4,
+      "total_rows": 4,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:52:51.109088"
+    },
+    "LABORSTATUS": {
+      "rows_migrated": 66,
+      "total_rows": 66,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:52:51.935739"
+    },
+    "LABTRANS": {
+      "rows_migrated": 7561,
+      "total_rows": 1000,
+      "percentage": 756.1,
+      "last_updated": "2026-01-06T20:53:05.998485"
+    },
+    "LANGUAGE": {
+      "rows_migrated": 161,
+      "total_rows": 161,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:53:06.941791"
+    },
+    "LAYOUT": {
+      "rows_migrated": 2938,
+      "total_rows": 1000,
+      "percentage": 293.8,
+      "last_updated": "2026-01-06T20:53:13.621099"
+    },
+    "LIMITTOLERANCE": {
+      "rows_migrated": 10,
+      "total_rows": 10,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:53:15.098313"
+    },
+    "LINEARAPPLAYER": {
+      "rows_migrated": 3,
+      "total_rows": 3,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:53:15.510493"
+    },
+    "LINEARATTRIBUTEDEFAULT": {
+      "rows_migrated": 8,
+      "total_rows": 8,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:53:15.934244"
+    },
+    "LINEARLAYER": {
+      "rows_migrated": 8,
+      "total_rows": 8,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:53:16.572801"
+    },
+    "LINEARREFMETHOD": {
+      "rows_migrated": 7,
+      "total_rows": 7,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:53:17.772393"
+    },
+    "LOCANCESTOR": {
+      "rows_migrated": 33386,
+      "total_rows": 1000,
+      "percentage": 3338.6,
+      "last_updated": "2026-01-06T20:53:35.308875"
+    },
+    "LOCATIONMETER": {
+      "rows_migrated": 3,
+      "total_rows": 3,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:53:36.233228"
+    },
+    "LOCATIONS": {
+      "rows_migrated": 1158,
+      "total_rows": 1000,
+      "percentage": 115.8,
+      "last_updated": "2026-01-06T20:53:39.287994"
+    },
+    "LOCHIERARCHY": {
+      "rows_migrated": 8430,
+      "total_rows": 1000,
+      "percentage": 843.0,
+      "last_updated": "2026-01-06T20:53:46.960301"
+    },
+    "LOCOPER": {
+      "rows_migrated": 2466,
+      "total_rows": 1000,
+      "percentage": 246.6,
+      "last_updated": "2026-01-06T20:53:50.923666"
+    },
+    "LOCSTATUS": {
+      "rows_migrated": 5024,
+      "total_rows": 1000,
+      "percentage": 502.4,
+      "last_updated": "2026-01-06T20:53:54.007187"
+    },
+    "LOCSYSTEM": {
+      "rows_migrated": 9,
+      "total_rows": 9,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T20:53:54.448878"
+    },
+    "LOGICALRELATIONSHIP": {
+      "rows_migrated": 5409,
+      "total_rows": 1000,
+      "percentage": 540.9,
+      "last_updated": "2026-01-06T20:53:59.595807"
+    },
+    "LOGINTRACKING": {
+      "rows_migrated": 509794,
+      "total_rows": 1000,
+      "percentage": 50979.4,
+      "last_updated": "2026-01-06T21:00:07.256103"
+    },
+    "LONGDESCRIPTION": {
+      "rows_migrated": 71684,
+      "total_rows": 1000,
+      "percentage": 7168.4,
+      "last_updated": "2026-01-06T21:01:17.257695"
+    },
+    "LRKEYS": {
+      "rows_migrated": 8942,
+      "total_rows": 1000,
+      "percentage": 894.2,
+      "last_updated": "2026-01-06T21:01:20.506376"
+    },
+    "LVCMSGINFO": {
+      "rows_migrated": 28,
+      "total_rows": 28,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:01:22.473225"
+    },
+    "LVCMSGINFODFLT": {
+      "rows_migrated": 7,
+      "total_rows": 7,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:01:23.075774"
+    },
+    "L_ALNDOMAIN": {
+      "rows_migrated": 2616,
+      "total_rows": 1000,
+      "percentage": 261.6,
+      "last_updated": "2026-01-06T21:01:24.323368"
+    },
+    "L_ASSETATTRIBUTE": {
+      "rows_migrated": 322,
+      "total_rows": 322,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:01:24.732715"
+    },
+    "L_COMMTEMPLATE": {
+      "rows_migrated": 234,
+      "total_rows": 234,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:01:25.212844"
+    },
+    "L_COMPANIES": {
+      "rows_migrated": 110,
+      "total_rows": 110,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:01:25.590428"
+    },
+    "L_COSTTYPE": {
+      "rows_migrated": 40,
+      "total_rows": 40,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:01:26.199425"
+    },
+    "L_CTRLCONDPROP": {
+      "rows_migrated": 12,
+      "total_rows": 12,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:01:27.524685"
+    },
+    "L_ITEM": {
+      "rows_migrated": 716,
+      "total_rows": 716,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:01:29.504528"
+    },
+    "L_KPIMAIN": {
+      "rows_migrated": 56,
+      "total_rows": 56,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:01:30.481661"
+    },
+    "L_MAPTIPMENU": {
+      "rows_migrated": 26,
+      "total_rows": 26,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:01:31.195465"
+    },
+    "L_MAXAPPS": {
+      "rows_migrated": 608,
+      "total_rows": 608,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:01:31.949829"
+    },
+    "L_MAXATTRCFG": {
+      "rows_migrated": 56358,
+      "total_rows": 1000,
+      "percentage": 5635.8,
+      "last_updated": "2026-01-06T21:01:58.682026"
+    },
+    "L_MAXATTRIBUTE": {
+      "rows_migrated": 56358,
+      "total_rows": 1000,
+      "percentage": 5635.8,
+      "last_updated": "2026-01-06T21:02:26.527795"
+    },
+    "L_MAXDOMAIN": {
+      "rows_migrated": 1156,
+      "total_rows": 1000,
+      "percentage": 115.6,
+      "last_updated": "2026-01-06T21:02:27.300152"
+    },
+    "L_MAXINTOBJDETAIL": {
+      "rows_migrated": 710,
+      "total_rows": 710,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:02:27.892383"
+    },
+    "L_MAXINTOBJECT": {
+      "rows_migrated": 620,
+      "total_rows": 620,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:02:28.389754"
+    },
+    "L_MAXLABELS": {
+      "rows_migrated": 105516,
+      "total_rows": 1000,
+      "percentage": 10551.6,
+      "last_updated": "2026-01-06T21:03:03.791064"
+    },
+    "L_MAXMENU": {
+      "rows_migrated": 1367,
+      "total_rows": 1000,
+      "percentage": 136.7,
+      "last_updated": "2026-01-06T21:03:04.987958"
+    },
+    "L_MAXMESSAGES": {
+      "rows_migrated": 21573,
+      "total_rows": 1000,
+      "percentage": 2157.3,
+      "last_updated": "2026-01-06T21:03:15.733148"
+    },
+    "L_MAXMODULES": {
+      "rows_migrated": 54,
+      "total_rows": 54,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:03:16.065310"
+    },
+    "L_MAXOBJECT": {
+      "rows_migrated": 3432,
+      "total_rows": 1000,
+      "percentage": 343.2,
+      "last_updated": "2026-01-06T21:03:18.184560"
+    },
+    "L_MAXOBJECTCFG": {
+      "rows_migrated": 3432,
+      "total_rows": 1000,
+      "percentage": 343.2,
+      "last_updated": "2026-01-06T21:03:21.055198"
+    },
+    "L_MAXSERVICE": {
+      "rows_migrated": 254,
+      "total_rows": 254,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:03:21.561265"
+    },
+    "L_NUMERICDOMAIN": {
+      "rows_migrated": 162,
+      "total_rows": 162,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:03:24.006346"
+    },
+    "L_OSLCQUERY": {
+      "rows_migrated": 88,
+      "total_rows": 88,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:03:25.226870"
+    },
+    "L_PALETTEITEM": {
+      "rows_migrated": 78,
+      "total_rows": 78,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:03:25.680229"
+    },
+    "L_QUERY": {
+      "rows_migrated": 276,
+      "total_rows": 276,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:03:30.102879"
+    },
+    "L_REPORT": {
+      "rows_migrated": 644,
+      "total_rows": 644,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:03:31.115108"
+    },
+    "L_REPORTDESIGN": {
+      "rows_migrated": 167,
+      "total_rows": 167,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:03:31.719454"
+    },
+    "L_REPORTEMAILFILE": {
+      "rows_migrated": 8,
+      "total_rows": 8,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:03:32.140255"
+    },
+    "L_REPORTLABEL": {
+      "rows_migrated": 42186,
+      "total_rows": 1000,
+      "percentage": 4218.6,
+      "last_updated": "2026-01-06T21:03:47.200703"
+    },
+    "L_REPORTLOOKUP": {
+      "rows_migrated": 1484,
+      "total_rows": 1000,
+      "percentage": 148.4,
+      "last_updated": "2026-01-06T21:03:48.198804"
+    },
+    "L_SIGOPTION": {
+      "rows_migrated": 16169,
+      "total_rows": 1000,
+      "percentage": 1616.9,
+      "last_updated": "2026-01-06T21:03:54.376451"
+    },
+    "L_SKDACTION": {
+      "rows_migrated": 424,
+      "total_rows": 424,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:03:55.112207"
+    },
+    "L_SKDDATAGROUP": {
+      "rows_migrated": 44,
+      "total_rows": 44,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:03:55.908189"
+    },
+    "L_SKDODMAPP": {
+      "rows_migrated": 8,
+      "total_rows": 8,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:03:56.623410"
+    },
+    "L_SKDPROPERTY": {
+      "rows_migrated": 138,
+      "total_rows": 138,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:03:57.977070"
+    },
+    "L_SKDRESOURCEVIEW": {
+      "rows_migrated": 22,
+      "total_rows": 22,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:03:58.766197"
+    },
+    "L_SOLUTION": {
+      "rows_migrated": 72,
+      "total_rows": 72,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:03:59.609967"
+    },
+    "L_SYNONYMDOMAIN": {
+      "rows_migrated": 3448,
+      "total_rows": 1000,
+      "percentage": 344.8,
+      "last_updated": "2026-01-06T21:04:02.906407"
+    },
+    "L_WFAPPTOOLBAR": {
+      "rows_migrated": 28,
+      "total_rows": 28,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:04:03.606613"
+    },
+    "MAPMANAGER": {
+      "rows_migrated": 2,
+      "total_rows": 2,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:04:04.542087"
+    },
+    "MAPSITES": {
+      "rows_migrated": 1,
+      "total_rows": 1,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:04:05.178346"
+    },
+    "MAPSYMBOLOGYDEFAULT": {
+      "rows_migrated": 1,
+      "total_rows": 1,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:04:06.196875"
+    },
+    "MAPTIP": {
+      "rows_migrated": 8,
+      "total_rows": 8,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:04:06.788511"
+    },
+    "MAPTIPDEFAULTS": {
+      "rows_migrated": 8,
+      "total_rows": 8,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:04:07.489102"
+    },
+    "MAPTIPMENU": {
+      "rows_migrated": 13,
+      "total_rows": 13,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:04:09.045003"
+    },
+    "MASTERPM": {
+      "rows_migrated": 1,
+      "total_rows": 1,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:04:09.452661"
+    },
+    "MATRECTRANS": {
+      "rows_migrated": 61,
+      "total_rows": 61,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:04:12.506747"
+    },
+    "MATUSETRANS": {
+      "rows_migrated": 81,
+      "total_rows": 81,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:04:13.643086"
+    },
+    "MAXAPPS": {
+      "rows_migrated": 307,
+      "total_rows": 307,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:04:15.031279"
+    },
+    "MAXATTRIBUTE": {
+      "rows_migrated": 28502,
+      "total_rows": 1000,
+      "percentage": 2850.2,
+      "last_updated": "2026-01-06T21:04:55.345550"
+    },
+    "MAXATTRIBUTECFG": {
+      "rows_migrated": 28502,
+      "total_rows": 1000,
+      "percentage": 2850.2,
+      "last_updated": "2026-01-06T21:05:25.290855"
+    },
+    "MAXCONDDETAIL": {
+      "rows_migrated": 43,
+      "total_rows": 43,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:05:26.298674"
+    },
+    "MAXCONTROLVALUE": {
+      "rows_migrated": 20,
+      "total_rows": 20,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:05:26.800504"
+    },
+    "MAXDATAPREFIX": {
+      "rows_migrated": 12,
+      "total_rows": 12,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:05:28.038358"
+    },
+    "MAXDOMAIN": {
+      "rows_migrated": 644,
+      "total_rows": 644,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:05:29.028066"
+    },
+    "MAXDOMAINLINK": {
+      "rows_migrated": 1273,
+      "total_rows": 1000,
+      "percentage": 127.3,
+      "last_updated": "2026-01-06T21:05:29.976974"
+    },
+    "MAXDOMVALCOND": {
+      "rows_migrated": 4,
+      "total_rows": 4,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:05:30.605395"
+    },
+    "MAXDYNAMICDOMLINK": {
+      "rows_migrated": 38,
+      "total_rows": 38,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:05:31.956300"
+    },
+    "MAXENDPOINT": {
+      "rows_migrated": 31,
+      "total_rows": 31,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:05:33.284388"
+    },
+    "MAXENDPOINTDTL": {
+      "rows_migrated": 225,
+      "total_rows": 225,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:05:34.180163"
+    },
+    "MAXEXTIFACEIN": {
+      "rows_migrated": 54,
+      "total_rows": 54,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:05:35.761261"
+    },
+    "MAXEXTIFACEOUT": {
+      "rows_migrated": 39,
+      "total_rows": 39,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:05:36.177767"
+    },
+    "MAXEXTLISTVAL": {
+      "rows_migrated": 20,
+      "total_rows": 20,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:05:36.727784"
+    },
+    "MAXEXTSYSCONTROL": {
+      "rows_migrated": 13,
+      "total_rows": 13,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:05:37.485147"
+    },
+    "MAXEXTSYSTEM": {
+      "rows_migrated": 8,
+      "total_rows": 8,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:05:38.018922"
+    },
+    "MAXGROUP": {
+      "rows_migrated": 69,
+      "total_rows": 69,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:05:40.336703"
+    },
+    "MAXHANDLER": {
+      "rows_migrated": 18,
+      "total_rows": 18,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:05:40.906648"
+    },
+    "MAXIFACECOND": {
+      "rows_migrated": 32,
+      "total_rows": 32,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:05:41.444422"
+    },
+    "MAXIFACECONTROL": {
+      "rows_migrated": 13,
+      "total_rows": 13,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:05:41.943626"
+    },
+    "MAXIFACEIN": {
+      "rows_migrated": 55,
+      "total_rows": 55,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:05:42.328914"
+    },
+    "MAXIFACEINVOKE": {
+      "rows_migrated": 1,
+      "total_rows": 1,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:05:43.688846"
+    },
+    "MAXIFACEOUT": {
+      "rows_migrated": 48,
+      "total_rows": 48,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:05:44.235335"
+    },
+    "MAXIFACEOUTCNTL": {
+      "rows_migrated": 16,
+      "total_rows": 16,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:05:45.484319"
+    },
+    "MAXIFACEPROC": {
+      "rows_migrated": 36,
+      "total_rows": 36,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:05:46.380506"
+    },
+    "MAXINTERROR": {
+      "rows_migrated": 20,
+      "total_rows": 20,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:05:49.281265"
+    },
+    "MAXINTERRORMSG": {
+      "rows_migrated": 20,
+      "total_rows": 20,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:05:50.017163"
+    },
+    "MAXINTLISTENER": {
+      "rows_migrated": 4,
+      "total_rows": 4,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:05:51.512377"
+    },
+    "MAXINTOBJALIAS": {
+      "rows_migrated": 3806,
+      "total_rows": 1000,
+      "percentage": 380.6,
+      "last_updated": "2026-01-06T21:05:56.221869"
+    },
+    "MAXINTOBJAPP": {
+      "rows_migrated": 11,
+      "total_rows": 11,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:05:56.656422"
+    },
+    "MAXINTOBJCOLS": {
+      "rows_migrated": 4664,
+      "total_rows": 1000,
+      "percentage": 466.4,
+      "last_updated": "2026-01-06T21:05:59.524222"
+    },
+    "MAXINTOBJDETAIL": {
+      "rows_migrated": 1201,
+      "total_rows": 1000,
+      "percentage": 120.1,
+      "last_updated": "2026-01-06T21:06:01.580292"
+    },
+    "MAXINTOBJECT": {
+      "rows_migrated": 403,
+      "total_rows": 403,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:06:02.541291"
+    },
+    "MAXINTPOLICY": {
+      "rows_migrated": 5,
+      "total_rows": 5,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:06:03.156164"
+    },
+    "MAXINTPOLICYPARAM": {
+      "rows_migrated": 5,
+      "total_rows": 5,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:06:03.972261"
+    },
+    "MAXLABELS": {
+      "rows_migrated": 63984,
+      "total_rows": 1000,
+      "percentage": 6398.4,
+      "last_updated": "2026-01-06T21:06:35.131125"
+    },
+    "MAXLAUNCHENTRY": {
+      "rows_migrated": 1,
+      "total_rows": 1,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:06:35.964384"
+    },
+    "MAXLECONTEXT": {
+      "rows_migrated": 1,
+      "total_rows": 1,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:06:36.794125"
+    },
+    "MAXLICAPPACCESS": {
+      "rows_migrated": 318,
+      "total_rows": 318,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:06:37.626562"
+    },
+    "MAXLICAPPMODEXT": {
+      "rows_migrated": 8,
+      "total_rows": 8,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:06:38.030146"
+    },
+    "MAXLICAPPS": {
+      "rows_migrated": 145,
+      "total_rows": 145,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:06:38.478845"
+    },
+    "MAXLICENSE": {
+      "rows_migrated": 1,
+      "total_rows": 1,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:06:39.318325"
+    },
+    "MAXLICPRDKEYLIST": {
+      "rows_migrated": 18,
+      "total_rows": 18,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:06:39.909177"
+    },
+    "MAXLICPRODAPPS": {
+      "rows_migrated": 235,
+      "total_rows": 235,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:06:41.154809"
+    },
+    "MAXLICPRODVUE": {
+      "rows_migrated": 2,
+      "total_rows": 2,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:06:43.385031"
+    },
+    "MAXLICPURCHDET": {
+      "rows_migrated": 1,
+      "total_rows": 1,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:06:44.233977"
+    },
+    "MAXLICRVU": {
+      "rows_migrated": 9,
+      "total_rows": 9,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:06:44.933207"
+    },
+    "MAXLICSELFSRVAPPS": {
+      "rows_migrated": 12,
+      "total_rows": 12,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:06:46.307269"
+    },
+    "MAXLICTYPESTATUS": {
+      "rows_migrated": 139,
+      "total_rows": 139,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:06:47.536474"
+    },
+    "MAXLOGAPPENDER": {
+      "rows_migrated": 9,
+      "total_rows": 9,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:06:52.757831"
+    },
+    "MAXLOGGER": {
+      "rows_migrated": 71,
+      "total_rows": 71,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:06:53.494944"
+    },
+    "MAXLOOKUPMAP": {
+      "rows_migrated": 247,
+      "total_rows": 247,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:06:54.291413"
+    },
+    "MAXMENU": {
+      "rows_migrated": 7911,
+      "total_rows": 1000,
+      "percentage": 791.1,
+      "last_updated": "2026-01-06T21:06:58.697227"
+    },
+    "MAXMESSAGES": {
+      "rows_migrated": 10953,
+      "total_rows": 1000,
+      "percentage": 1095.3,
+      "last_updated": "2026-01-06T21:07:08.639714"
+    },
+    "MAXMODULES": {
+      "rows_migrated": 27,
+      "total_rows": 27,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:07:08.941516"
+    },
+    "MAXOBJECT": {
+      "rows_migrated": 1728,
+      "total_rows": 1000,
+      "percentage": 172.8,
+      "last_updated": "2026-01-06T21:07:10.801825"
+    },
+    "MAXOBJECTCFG": {
+      "rows_migrated": 1728,
+      "total_rows": 1000,
+      "percentage": 172.8,
+      "last_updated": "2026-01-06T21:07:12.563697"
+    },
+    "MAXPRESENTATION": {
+      "rows_migrated": 248,
+      "total_rows": 248,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:07:37.634850"
+    },
+    "MAXPROCCOLS": {
+      "rows_migrated": 1,
+      "total_rows": 1,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:07:38.185777"
+    },
+    "MAXPROP": {
+      "rows_migrated": 878,
+      "total_rows": 878,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:07:39.858086"
+    },
+    "MAXPROPVALUE": {
+      "rows_migrated": 873,
+      "total_rows": 873,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:07:42.329660"
+    },
+    "MAXQUEUE": {
+      "rows_migrated": 7,
+      "total_rows": 7,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:07:42.818686"
+    },
+    "MAXRELATIONSHIP": {
+      "rows_migrated": 7024,
+      "total_rows": 1000,
+      "percentage": 702.4,
+      "last_updated": "2026-01-06T21:07:51.222100"
+    },
+    "MAXREPLACEPROC": {
+      "rows_migrated": 8,
+      "total_rows": 8,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:07:51.781479"
+    },
+    "MAXROLE": {
+      "rows_migrated": 73,
+      "total_rows": 73,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:07:52.286037"
+    },
+    "MAXROWSTAMP": {
+      "rows_migrated": 288,
+      "total_rows": 288,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:07:52.743554"
+    },
+    "MAXSEQUENCE": {
+      "rows_migrated": 1143,
+      "total_rows": 1000,
+      "percentage": 114.3,
+      "last_updated": "2026-01-06T21:07:54.699333"
+    },
+    "MAXSERVICE": {
+      "rows_migrated": 127,
+      "total_rows": 127,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:07:55.414142"
+    },
+    "MAXSERVSECURITY": {
+      "rows_migrated": 10,
+      "total_rows": 10,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:07:56.056856"
+    },
+    "MAXSYSINDEXES": {
+      "rows_migrated": 2906,
+      "total_rows": 1000,
+      "percentage": 290.6,
+      "last_updated": "2026-01-06T21:07:58.588857"
+    },
+    "MAXSYSKEYS": {
+      "rows_migrated": 5419,
+      "total_rows": 1000,
+      "percentage": 541.9,
+      "last_updated": "2026-01-06T21:08:01.255087"
+    },
+    "MAXTABLE": {
+      "rows_migrated": 1177,
+      "total_rows": 1000,
+      "percentage": 117.7,
+      "last_updated": "2026-01-06T21:08:02.856223"
+    },
+    "MAXTABLECFG": {
+      "rows_migrated": 1177,
+      "total_rows": 1000,
+      "percentage": 117.7,
+      "last_updated": "2026-01-06T21:08:04.027278"
+    },
+    "MAXTABLEDOMAIN": {
+      "rows_migrated": 63,
+      "total_rows": 63,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:08:04.465046"
+    },
+    "MAXTOKEN": {
+      "rows_migrated": 1,
+      "total_rows": 1,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:08:06.143284"
+    },
+    "MAXTRANSFORMPROC": {
+      "rows_migrated": 2,
+      "total_rows": 2,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:08:06.697783"
+    },
+    "MAXUSER": {
+      "rows_migrated": 386,
+      "total_rows": 386,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:08:07.322642"
+    },
+    "MAXUSERSTATUS": {
+      "rows_migrated": 560,
+      "total_rows": 560,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:08:10.490036"
+    },
+    "MAXVARS": {
+      "rows_migrated": 303,
+      "total_rows": 303,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:08:12.470290"
+    },
+    "MAXVARTYPE": {
+      "rows_migrated": 303,
+      "total_rows": 303,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:08:13.401573"
+    },
+    "MAXVIEW": {
+      "rows_migrated": 87,
+      "total_rows": 87,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:08:14.197069"
+    },
+    "MAXVIEWCFG": {
+      "rows_migrated": 87,
+      "total_rows": 87,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:08:14.808560"
+    },
+    "MAXVIEWCOLUMN": {
+      "rows_migrated": 4345,
+      "total_rows": 1000,
+      "percentage": 434.5,
+      "last_updated": "2026-01-06T21:08:16.803039"
+    },
+    "MAXVIEWCOLUMNCFG": {
+      "rows_migrated": 4345,
+      "total_rows": 1000,
+      "percentage": 434.5,
+      "last_updated": "2026-01-06T21:08:19.314805"
+    },
+    "MAXWSREGISTRY": {
+      "rows_migrated": 2,
+      "total_rows": 2,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:08:19.829701"
+    },
+    "MEASUREMENT": {
+      "rows_migrated": 8788,
+      "total_rows": 1000,
+      "percentage": 878.8,
+      "last_updated": "2026-01-06T21:08:24.415963"
+    },
+    "MEASUREPOINT": {
+      "rows_migrated": 6594,
+      "total_rows": 1000,
+      "percentage": 659.4,
+      "last_updated": "2026-01-06T21:08:28.312209"
+    },
+    "MEASUREUNIT": {
+      "rows_migrated": 134,
+      "total_rows": 134,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:08:29.298125"
+    },
+    "MEA_DUMMY_TABLE": {
+      "rows_migrated": 1,
+      "total_rows": 1,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:08:30.087923"
+    },
+    "METER": {
+      "rows_migrated": 599,
+      "total_rows": 599,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:08:31.144122"
+    },
+    "METERGROUP": {
+      "rows_migrated": 2,
+      "total_rows": 2,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:08:31.771578"
+    },
+    "METERINGROUP": {
+      "rows_migrated": 6,
+      "total_rows": 6,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:08:32.229607"
+    },
+    "METERREADING": {
+      "rows_migrated": 9265,
+      "total_rows": 1000,
+      "percentage": 926.5,
+      "last_updated": "2026-01-06T21:08:39.490369"
+    },
+    "MR": {
+      "rows_migrated": 169,
+      "total_rows": 169,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:08:45.811439"
+    },
+    "MRCOST": {
+      "rows_migrated": 167,
+      "total_rows": 167,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:08:46.351568"
+    },
+    "MRLINE": {
+      "rows_migrated": 167,
+      "total_rows": 167,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:08:47.068569"
+    },
+    "MRSTATUS": {
+      "rows_migrated": 359,
+      "total_rows": 359,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:08:47.599422"
+    },
+    "MULTIASSETLOCCI": {
+      "rows_migrated": 585503,
+      "total_rows": 1000,
+      "percentage": 58550.3,
+      "last_updated": "2026-01-06T21:15:45.133709"
+    },
+    "MULTIASSETLOCCIPR": {
+      "rows_migrated": 2,
+      "total_rows": 2,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:15:48.888890"
+    },
+    "MXCOLLAB": {
+      "rows_migrated": 116,
+      "total_rows": 116,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:15:51.143445"
+    },
+    "MXCOLLABREF": {
+      "rows_migrated": 39,
+      "total_rows": 39,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:15:52.570007"
+    },
+    "MXODMAPP": {
+      "rows_migrated": 2,
+      "total_rows": 2,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:15:53.950554"
+    },
+    "NONWORKTIME": {
+      "rows_migrated": 103,
+      "total_rows": 103,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:15:57.201052"
+    },
+    "NOTFMSGTEMPLATE": {
+      "rows_migrated": 1,
+      "total_rows": 1,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:15:58.172841"
+    },
+    "NUMERICDOMAIN": {
+      "rows_migrated": 99,
+      "total_rows": 99,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:15:58.901908"
+    },
+    "NUMRANGEDOMAIN": {
+      "rows_migrated": 3,
+      "total_rows": 3,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:15:59.765304"
+    },
+    "ORGANIZATION": {
+      "rows_migrated": 1,
+      "total_rows": 1,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:16:05.741597"
+    },
+    "OSACCESSLOG": {
+      "rows_migrated": 238,
+      "total_rows": 238,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:16:06.263540"
+    },
+    "OSEVENT": {
+      "rows_migrated": 1,
+      "total_rows": 1,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:16:07.075821"
+    },
+    "OSEVENTCONDITION": {
+      "rows_migrated": 1,
+      "total_rows": 1,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:16:07.993422"
+    },
+    "OSLCBUSRES": {
+      "rows_migrated": 33,
+      "total_rows": 33,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:16:08.618479"
+    },
+    "OSLCCOMMONPROPS": {
+      "rows_migrated": 11,
+      "total_rows": 11,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:16:09.131519"
+    },
+    "OSLCERRORMAP": {
+      "rows_migrated": 23,
+      "total_rows": 23,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:16:10.217912"
+    },
+    "OSLCEXTMEDIATYPE": {
+      "rows_migrated": 684,
+      "total_rows": 684,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:16:10.769315"
+    },
+    "OSLCNSPREFIX": {
+      "rows_migrated": 10,
+      "total_rows": 10,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:16:17.389574"
+    },
+    "OSLCPROVIDER": {
+      "rows_migrated": 1,
+      "total_rows": 1,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:16:18.629884"
+    },
+    "OSLCQUERY": {
+      "rows_migrated": 44,
+      "total_rows": 44,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:16:19.287900"
+    },
+    "OSOSLCACTION": {
+      "rows_migrated": 1,
+      "total_rows": 1,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:16:24.676924"
+    },
+    "OSRECORDTOUCHLOG": {
+      "rows_migrated": 4,
+      "total_rows": 4,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:16:26.215848"
+    },
+    "OSUSED": {
+      "rows_migrated": 77,
+      "total_rows": 77,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:16:26.741029"
+    },
+    "OSUSERSUBSCRIPTION": {
+      "rows_migrated": 2104,
+      "total_rows": 1000,
+      "percentage": 210.4,
+      "last_updated": "2026-01-06T21:16:28.896257"
+    },
+    "PALETTEITEM": {
+      "rows_migrated": 39,
+      "total_rows": 39,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:16:29.703721"
+    },
+    "PASSWORDHISTORY": {
+      "rows_migrated": 3803,
+      "total_rows": 1000,
+      "percentage": 380.3,
+      "last_updated": "2026-01-06T21:16:32.136703"
+    },
+    "PERSON": {
+      "rows_migrated": 631,
+      "total_rows": 631,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:16:34.599317"
+    },
+    "PERSONANCESTOR": {
+      "rows_migrated": 1087,
+      "total_rows": 1000,
+      "percentage": 108.7,
+      "last_updated": "2026-01-06T21:16:35.636480"
+    },
+    "PERSONGROUP": {
+      "rows_migrated": 117,
+      "total_rows": 117,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:16:38.842981"
+    },
+    "PERSONGROUPTEAM": {
+      "rows_migrated": 208,
+      "total_rows": 208,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:16:41.084248"
+    },
+    "PERSONSTATUS": {
+      "rows_migrated": 627,
+      "total_rows": 627,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:16:42.648220"
+    },
+    "PHONE": {
+      "rows_migrated": 276,
+      "total_rows": 276,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:16:44.539209"
+    },
+    "PLUSCDSCONFIG": {
+      "rows_migrated": 6,
+      "total_rows": 6,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:16:48.131756"
+    },
+    "PLUSCDSINSTR": {
+      "rows_migrated": 7,
+      "total_rows": 7,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:16:48.908206"
+    },
+    "PLUSCDSPOINT": {
+      "rows_migrated": 20,
+      "total_rows": 20,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:16:50.393560"
+    },
+    "PLUSCDSSTATUS": {
+      "rows_migrated": 12,
+      "total_rows": 12,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:16:51.637411"
+    },
+    "PLUSCJPSTATUS": {
+      "rows_migrated": 1710,
+      "total_rows": 1000,
+      "percentage": 171.0,
+      "last_updated": "2026-01-06T21:16:55.376415"
+    },
+    "PLUSDSPLAN": {
+      "rows_migrated": 6,
+      "total_rows": 6,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:17:10.078243"
+    },
+    "PLUSTASSETALIAS": {
+      "rows_migrated": 46434,
+      "total_rows": 1000,
+      "percentage": 4643.4,
+      "last_updated": "2026-01-06T21:17:45.027875"
+    },
+    "PLUSTASSETSTHIST": {
+      "rows_migrated": 148281,
+      "total_rows": 1000,
+      "percentage": 14828.1,
+      "last_updated": "2026-01-06T21:19:30.248918"
+    },
+    "PLUSTCB": {
+      "rows_migrated": 24,
+      "total_rows": 24,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:19:31.915848"
+    },
+    "PLUSTCBLINES": {
+      "rows_migrated": 1584,
+      "total_rows": 1000,
+      "percentage": 158.4,
+      "last_updated": "2026-01-06T21:19:33.758578"
+    },
+    "PLUSTCBSEL": {
+      "rows_migrated": 42,
+      "total_rows": 42,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:19:34.716599"
+    },
+    "PLUSTCBSTATUS": {
+      "rows_migrated": 83,
+      "total_rows": 83,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:19:35.816867"
+    },
+    "PLUSTCOMP": {
+      "rows_migrated": 1020,
+      "total_rows": 1000,
+      "percentage": 102.0,
+      "last_updated": "2026-01-06T21:19:38.296024"
+    },
+    "PLUSTMTRCHNG": {
+      "rows_migrated": 186,
+      "total_rows": 186,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:20:14.735202"
+    },
+    "PLUSTPMHIST": {
+      "rows_migrated": 29494,
+      "total_rows": 1000,
+      "percentage": 2949.4,
+      "last_updated": "2026-01-06T21:20:31.405408"
+    },
+    "PLUSTPOS": {
+      "rows_migrated": 1,
+      "total_rows": 1,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:20:32.955743"
+    },
+    "PLUSTWARRTRANS": {
+      "rows_migrated": 11,
+      "total_rows": 11,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:20:50.077234"
+    },
+    "PLUSTWOASSET": {
+      "rows_migrated": 8,
+      "total_rows": 8,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:20:51.783716"
+    },
+    "PLUSTWOQUALFLG": {
+      "rows_migrated": 577631,
+      "total_rows": 1000,
+      "percentage": 57763.1,
+      "last_updated": "2026-01-06T21:25:31.299328"
+    },
+    "PM": {
+      "rows_migrated": 13874,
+      "total_rows": 1000,
+      "percentage": 1387.4,
+      "last_updated": "2026-01-06T21:25:59.992411"
+    },
+    "PMANCESTOR": {
+      "rows_migrated": 13874,
+      "total_rows": 1000,
+      "percentage": 1387.4,
+      "last_updated": "2026-01-06T21:26:06.125177"
+    },
+    "PMMETER": {
+      "rows_migrated": 9,
+      "total_rows": 9,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:26:11.044717"
+    },
+    "PMSEASONS": {
+      "rows_migrated": 2,
+      "total_rows": 2,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:26:12.085453"
+    },
+    "PMSEQUENCE": {
+      "rows_migrated": 13605,
+      "total_rows": 1000,
+      "percentage": 1360.5,
+      "last_updated": "2026-01-06T21:26:18.465246"
+    },
+    "PO": {
+      "rows_migrated": 4,
+      "total_rows": 4,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:26:19.582866"
+    },
+    "POCOST": {
+      "rows_migrated": 4,
+      "total_rows": 4,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:26:20.608630"
+    },
+    "POINTWO": {
+      "rows_migrated": 16,
+      "total_rows": 16,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:26:21.877477"
+    },
+    "POLINE": {
+      "rows_migrated": 4,
+      "total_rows": 4,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:26:22.459850"
+    },
+    "PORTLET": {
+      "rows_migrated": 8,
+      "total_rows": 8,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:26:22.947644"
+    },
+    "PORTLETDISPLAY": {
+      "rows_migrated": 8,
+      "total_rows": 8,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:26:23.446272"
+    },
+    "POSTATUS": {
+      "rows_migrated": 8,
+      "total_rows": 8,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:26:24.003711"
+    },
+    "PR": {
+      "rows_migrated": 20,
+      "total_rows": 20,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:26:27.847299"
+    },
+    "PR1438160123": {
+      "rows_migrated": 22,
+      "total_rows": 22,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:26:28.224458"
+    },
+    "PRCOST": {
+      "rows_migrated": 30,
+      "total_rows": 30,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:26:28.773269"
+    },
+    "PRICALC": {
+      "rows_migrated": 12,
+      "total_rows": 12,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:26:30.799061"
+    },
+    "PRLINE": {
+      "rows_migrated": 30,
+      "total_rows": 30,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:26:32.158503"
+    },
+    "PRLINE1438160123": {
+      "rows_migrated": 12,
+      "total_rows": 12,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:26:32.859263"
+    },
+    "PROCOBJ": {
+      "rows_migrated": 1,
+      "total_rows": 1,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:26:33.490348"
+    },
+    "PROCRULE": {
+      "rows_migrated": 9,
+      "total_rows": 9,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:26:34.085986"
+    },
+    "PROPERTYASSOC": {
+      "rows_migrated": 527,
+      "total_rows": 527,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:26:35.040142"
+    },
+    "PROPERTYDEFAULT": {
+      "rows_migrated": 512,
+      "total_rows": 512,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:26:35.883192"
+    },
+    "PRSTATUS": {
+      "rows_migrated": 33,
+      "total_rows": 33,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:26:36.298810"
+    },
+    "QUALIFICATION": {
+      "rows_migrated": 3,
+      "total_rows": 3,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:26:38.619681"
+    },
+    "QUALSTATUS": {
+      "rows_migrated": 3,
+      "total_rows": 3,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:26:39.135742"
+    },
+    "QUERY": {
+      "rows_migrated": 379,
+      "total_rows": 379,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:26:40.154087"
+    },
+    "QUERYTEMPLATE": {
+      "rows_migrated": 6,
+      "total_rows": 6,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:26:40.781253"
+    },
+    "QUERYTEMPLATEATTR": {
+      "rows_migrated": 158,
+      "total_rows": 158,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:26:41.288041"
+    },
+    "RECONCOMPFILTER": {
+      "rows_migrated": 4,
+      "total_rows": 4,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:26:41.974423"
+    },
+    "RECONRESULT": {
+      "rows_migrated": 30,
+      "total_rows": 30,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:26:44.287986"
+    },
+    "RECONRULE": {
+      "rows_migrated": 5,
+      "total_rows": 5,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:26:45.099919"
+    },
+    "RECONRULECLAUSE": {
+      "rows_migrated": 5,
+      "total_rows": 5,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:26:45.818681"
+    },
+    "RECONTASK": {
+      "rows_migrated": 8,
+      "total_rows": 8,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:26:46.331291"
+    },
+    "RECONTASKCOMP": {
+      "rows_migrated": 5,
+      "total_rows": 5,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:26:46.793923"
+    },
+    "RECONTASKFILTER": {
+      "rows_migrated": 3,
+      "total_rows": 3,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:26:47.258358"
+    },
+    "RECONTASKFLTRVAL": {
+      "rows_migrated": 3,
+      "total_rows": 3,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:26:47.771453"
+    },
+    "RECONTASKLINK": {
+      "rows_migrated": 8,
+      "total_rows": 8,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:26:48.286944"
+    },
+    "RELATEDAPPAUTH": {
+      "rows_migrated": 3908,
+      "total_rows": 1000,
+      "percentage": 390.8,
+      "last_updated": "2026-01-06T21:26:50.278551"
+    },
+    "RELATEDRECORD": {
+      "rows_migrated": 1325,
+      "total_rows": 1000,
+      "percentage": 132.5,
+      "last_updated": "2026-01-06T21:26:51.245096"
+    },
+    "RELATEDSLA": {
+      "rows_migrated": 1,
+      "total_rows": 1,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:26:52.195351"
+    },
+    "RELATEDWORKCENTER": {
+      "rows_migrated": 3,
+      "total_rows": 3,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:26:53.324865"
+    },
+    "RELATION": {
+      "rows_migrated": 16,
+      "total_rows": 16,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:26:54.269305"
+    },
+    "REORDERPAD": {
+      "rows_migrated": 37,
+      "total_rows": 37,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:26:56.007963"
+    },
+    "REPORT": {
+      "rows_migrated": 359,
+      "total_rows": 359,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:26:56.893930"
+    },
+    "REPORTADHOC": {
+      "rows_migrated": 3,
+      "total_rows": 3,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:26:57.744285"
+    },
+    "REPORTADHOCFIELD": {
+      "rows_migrated": 24,
+      "total_rows": 24,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:26:59.343011"
+    },
+    "REPORTAPPAUTH": {
+      "rows_migrated": 579,
+      "total_rows": 579,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:27:00.260000"
+    },
+    "REPORTAUTH": {
+      "rows_migrated": 9,
+      "total_rows": 9,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:27:00.935599"
+    },
+    "REPORTDEPEND": {
+      "rows_migrated": 195,
+      "total_rows": 195,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:27:02.939115"
+    },
+    "REPORTDESIGN": {
+      "rows_migrated": 197,
+      "total_rows": 197,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:27:29.455474"
+    },
+    "REPORTEMAILFILE": {
+      "rows_migrated": 4,
+      "total_rows": 4,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:27:30.777997"
+    },
+    "REPORTEXPVALUE": {
+      "rows_migrated": 5,
+      "total_rows": 5,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:27:31.400346"
+    },
+    "REPORTFILEEXPORT": {
+      "rows_migrated": 12,
+      "total_rows": 12,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:27:31.762926"
+    },
+    "REPORTHYPERLINKQUERYURL": {
+      "rows_migrated": 1,
+      "total_rows": 1,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:27:32.320998"
+    },
+    "REPORTLABEL": {
+      "rows_migrated": 21523,
+      "total_rows": 1000,
+      "percentage": 2152.3,
+      "last_updated": "2026-01-06T21:27:51.799261"
+    },
+    "REPORTLISTCFG": {
+      "rows_migrated": 4,
+      "total_rows": 4,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:27:52.405088"
+    },
+    "REPORTLOOKUP": {
+      "rows_migrated": 759,
+      "total_rows": 759,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:27:54.782227"
+    },
+    "REPORTOSAUTH": {
+      "rows_migrated": 91,
+      "total_rows": 91,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:27:55.492055"
+    },
+    "REPORTPARAM": {
+      "rows_migrated": 1185,
+      "total_rows": 1000,
+      "percentage": 118.5,
+      "last_updated": "2026-01-06T21:27:59.481202"
+    },
+    "REPORTSCHED": {
+      "rows_migrated": 1,
+      "total_rows": 1,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:28:03.110536"
+    },
+    "REPORTUSAGELOG": {
+      "rows_migrated": 1416,
+      "total_rows": 1000,
+      "percentage": 141.6,
+      "last_updated": "2026-01-06T21:28:06.496245"
+    },
+    "REPORTWHERE": {
+      "rows_migrated": 1,
+      "total_rows": 1,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:28:06.923268"
+    },
+    "RESTSYSACTION": {
+      "rows_migrated": 40,
+      "total_rows": 40,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:28:07.285730"
+    },
+    "RESULTSETCOLS": {
+      "rows_migrated": 2142,
+      "total_rows": 1000,
+      "percentage": 214.2,
+      "last_updated": "2026-01-06T21:28:08.516880"
+    },
+    "ROUTES": {
+      "rows_migrated": 2,
+      "total_rows": 2,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:28:14.921537"
+    },
+    "ROUTE_STOP": {
+      "rows_migrated": 8,
+      "total_rows": 8,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:28:17.392106"
+    },
+    "RSCONFIG": {
+      "rows_migrated": 224401,
+      "total_rows": 1000,
+      "percentage": 22440.1,
+      "last_updated": "2026-01-06T21:30:31.574226"
+    },
+    "SCCONFIG": {
+      "rows_migrated": 497,
+      "total_rows": 497,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:30:33.802805"
+    },
+    "SCHTOOLTIP": {
+      "rows_migrated": 12,
+      "total_rows": 12,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:30:35.396818"
+    },
+    "SCRIPTLAUNCHPOINT": {
+      "rows_migrated": 22,
+      "total_rows": 22,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:30:36.464275"
+    },
+    "SCTEMPLATE": {
+      "rows_migrated": 18,
+      "total_rows": 18,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:30:38.967173"
+    },
+    "SECURITYRESTRICT": {
+      "rows_migrated": 8,
+      "total_rows": 8,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:30:39.467640"
+    },
+    "SERVERSESSION": {
+      "rows_migrated": 2,
+      "total_rows": 2,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:30:40.130253"
+    },
+    "SERVICEADDRESS": {
+      "rows_migrated": 20,
+      "total_rows": 20,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:30:40.598238"
+    },
+    "SETS": {
+      "rows_migrated": 2,
+      "total_rows": 2,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:30:42.730308"
+    },
+    "SFWLICENSE": {
+      "rows_migrated": 121,
+      "total_rows": 121,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:30:43.712504"
+    },
+    "SHIFT": {
+      "rows_migrated": 2,
+      "total_rows": 2,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:30:44.783536"
+    },
+    "SHIFTPATTERNDAY": {
+      "rows_migrated": 14,
+      "total_rows": 14,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:30:45.102324"
+    },
+    "SIGOPTFLAG": {
+      "rows_migrated": 350,
+      "total_rows": 350,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:30:47.281227"
+    },
+    "SIGOPTION": {
+      "rows_migrated": 8177,
+      "total_rows": 1000,
+      "percentage": 817.7,
+      "last_updated": "2026-01-06T21:30:54.984426"
+    },
+    "SITE": {
+      "rows_migrated": 1,
+      "total_rows": 1,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:30:55.406056"
+    },
+    "SITEAUTH": {
+      "rows_migrated": 3,
+      "total_rows": 3,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:30:56.365429"
+    },
+    "SKDACTION": {
+      "rows_migrated": 213,
+      "total_rows": 213,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:30:59.039562"
+    },
+    "SKDACTIVITY": {
+      "rows_migrated": 3531,
+      "total_rows": 1000,
+      "percentage": 353.1,
+      "last_updated": "2026-01-06T21:31:03.358148"
+    },
+    "SKDCOMPLIANCE": {
+      "rows_migrated": 1,
+      "total_rows": 1,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:31:06.552451"
+    },
+    "SKDCONSTRAINT": {
+      "rows_migrated": 4,
+      "total_rows": 4,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:31:07.618459"
+    },
+    "SKDDATAGROUP": {
+      "rows_migrated": 22,
+      "total_rows": 22,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:31:08.955667"
+    },
+    "SKDGVPREF": {
+      "rows_migrated": 1,
+      "total_rows": 1,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:31:10.771853"
+    },
+    "SKDOBJECT": {
+      "rows_migrated": 45,
+      "total_rows": 45,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:31:14.394905"
+    },
+    "SKDOBJECTMGR": {
+      "rows_migrated": 31,
+      "total_rows": 31,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:31:15.043639"
+    },
+    "SKDODMAPP": {
+      "rows_migrated": 4,
+      "total_rows": 4,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:31:15.589731"
+    },
+    "SKDODMECONSTRAINTINFO": {
+      "rows_migrated": 89,
+      "total_rows": 89,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:31:16.466005"
+    },
+    "SKDPROJECT": {
+      "rows_migrated": 4,
+      "total_rows": 4,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:31:23.056178"
+    },
+    "SKDPROJECTSCENARIO": {
+      "rows_migrated": 1,
+      "total_rows": 1,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:31:25.125818"
+    },
+    "SKDPROJECTSHIFTS": {
+      "rows_migrated": 5,
+      "total_rows": 5,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:31:25.591563"
+    },
+    "SKDPROJECTSTATUS": {
+      "rows_migrated": 6,
+      "total_rows": 6,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:31:26.049719"
+    },
+    "SKDPROPERTY": {
+      "rows_migrated": 98,
+      "total_rows": 98,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:31:27.220753"
+    },
+    "SKDPROPERTYMAP": {
+      "rows_migrated": 157,
+      "total_rows": 157,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:31:28.327807"
+    },
+    "SKDQUERY": {
+      "rows_migrated": 6,
+      "total_rows": 6,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:31:29.216068"
+    },
+    "SKDRESERVATION": {
+      "rows_migrated": 1173,
+      "total_rows": 1000,
+      "percentage": 117.3,
+      "last_updated": "2026-01-06T21:31:30.799944"
+    },
+    "SKDRESOBJECT": {
+      "rows_migrated": 17,
+      "total_rows": 17,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:31:31.665320"
+    },
+    "SKDRESOURCE": {
+      "rows_migrated": 5,
+      "total_rows": 5,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:31:32.108103"
+    },
+    "SKDRESOURCEUSE": {
+      "rows_migrated": 5,
+      "total_rows": 5,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:31:32.357340"
+    },
+    "SKDRESOURCEVIEW": {
+      "rows_migrated": 11,
+      "total_rows": 11,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:31:32.692446"
+    },
+    "SKDSTATE": {
+      "rows_migrated": 16,
+      "total_rows": 16,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:31:35.017813"
+    },
+    "SKDTEMPLATES": {
+      "rows_migrated": 12,
+      "total_rows": 12,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:31:35.726900"
+    },
+    "SKDUSAGE": {
+      "rows_migrated": 3767,
+      "total_rows": 1000,
+      "percentage": 376.7,
+      "last_updated": "2026-01-06T21:31:38.722278"
+    },
+    "SLA": {
+      "rows_migrated": 1,
+      "total_rows": 1,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:31:41.542628"
+    },
+    "SLACOMMITMENTS": {
+      "rows_migrated": 46,
+      "total_rows": 46,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:31:42.759717"
+    },
+    "SLAKPI": {
+      "rows_migrated": 2,
+      "total_rows": 2,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:31:43.525701"
+    },
+    "SLARECORDS": {
+      "rows_migrated": 54,
+      "total_rows": 54,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:31:43.991731"
+    },
+    "SMS": {
+      "rows_migrated": 90,
+      "total_rows": 90,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:31:46.772900"
+    },
+    "SOLUTION": {
+      "rows_migrated": 37,
+      "total_rows": 37,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:31:47.183926"
+    },
+    "SOLUTIONSTATUS": {
+      "rows_migrated": 67,
+      "total_rows": 67,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:31:48.235809"
+    },
+    "SPAREPART": {
+      "rows_migrated": 28416,
+      "total_rows": 1000,
+      "percentage": 2841.6,
+      "last_updated": "2026-01-06T21:32:06.838514"
+    },
+    "SYNONYMDOMAIN": {
+      "rows_migrated": 1851,
+      "total_rows": 1000,
+      "percentage": 185.1,
+      "last_updated": "2026-01-06T21:32:12.016444"
+    },
+    "TASKSCHEDULER": {
+      "rows_migrated": 69,
+      "total_rows": 69,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:32:17.166379"
+    },
+    "TAXORDER": {
+      "rows_migrated": 4,
+      "total_rows": 4,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:32:18.068019"
+    },
+    "TAXTYPE": {
+      "rows_migrated": 5,
+      "total_rows": 5,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:32:18.634679"
+    },
+    "TDTVERSION": {
+      "rows_migrated": 10,
+      "total_rows": 10,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:32:19.341993"
+    },
+    "TEMPLATESTATUS": {
+      "rows_migrated": 22,
+      "total_rows": 22,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:32:19.782657"
+    },
+    "TICKET": {
+      "rows_migrated": 6192,
+      "total_rows": 1000,
+      "percentage": 619.2,
+      "last_updated": "2026-01-06T21:32:34.136723"
+    },
+    "TICKETSPEC": {
+      "rows_migrated": 73,
+      "total_rows": 73,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:32:34.808008"
+    },
+    "TKOWNERHISTORY": {
+      "rows_migrated": 160,
+      "total_rows": 160,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:32:36.581463"
+    },
+    "TKSERVICEADDRESS": {
+      "rows_migrated": 6192,
+      "total_rows": 1000,
+      "percentage": 619.2,
+      "last_updated": "2026-01-06T21:32:47.896999"
+    },
+    "TKSTATUS": {
+      "rows_migrated": 17931,
+      "total_rows": 1000,
+      "percentage": 1793.1,
+      "last_updated": "2026-01-06T21:32:58.565236"
+    },
+    "TKTEMPLATE": {
+      "rows_migrated": 24,
+      "total_rows": 24,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:33:00.026566"
+    },
+    "TKTEMPLTACTIVITY": {
+      "rows_migrated": 23,
+      "total_rows": 23,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:33:01.598099"
+    },
+    "TLOAMPRMDFLT": {
+      "rows_migrated": 3,
+      "total_rows": 3,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:33:07.344747"
+    },
+    "TLOAMSOFTWARE": {
+      "rows_migrated": 2175,
+      "total_rows": 1000,
+      "percentage": 217.5,
+      "last_updated": "2026-01-06T21:33:13.862068"
+    },
+    "TLOAMSWCATALOG": {
+      "rows_migrated": 3,
+      "total_rows": 3,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:33:15.785186"
+    },
+    "TOOLQUAL": {
+      "rows_migrated": 372,
+      "total_rows": 372,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:33:17.469086"
+    },
+    "TOOLTRANS": {
+      "rows_migrated": 1,
+      "total_rows": 1,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:33:17.900628"
+    },
+    "USERPREF": {
+      "rows_migrated": 63,
+      "total_rows": 63,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:33:20.641544"
+    },
+    "WARRANTYASSET": {
+      "rows_migrated": 10334,
+      "total_rows": 1000,
+      "percentage": 1033.4,
+      "last_updated": "2026-01-06T21:33:26.381049"
+    },
+    "WARRANTYLINE": {
+      "rows_migrated": 9,
+      "total_rows": 9,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:33:26.891243"
+    },
+    "WCRELATEDTEMPLATE": {
+      "rows_migrated": 2,
+      "total_rows": 2,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:33:28.305405"
+    },
+    "WCTEMPLATEAUTH": {
+      "rows_migrated": 154,
+      "total_rows": 154,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:33:29.033560"
+    },
+    "WEATHERAPP": {
+      "rows_migrated": 4,
+      "total_rows": 4,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:33:32.153740"
+    },
+    "WEATHERATTR": {
+      "rows_migrated": 100,
+      "total_rows": 100,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:33:35.595451"
+    },
+    "WEATHERCFG": {
+      "rows_migrated": 4,
+      "total_rows": 4,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:33:36.988214"
+    },
+    "WEATHERCFGATTR": {
+      "rows_migrated": 350,
+      "total_rows": 350,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:33:38.131550"
+    },
+    "WEATHERENDPOINT": {
+      "rows_migrated": 1,
+      "total_rows": 1,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:33:39.258888"
+    },
+    "WEATHERORG": {
+      "rows_migrated": 1,
+      "total_rows": 1,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:33:40.813261"
+    },
+    "WFACTION": {
+      "rows_migrated": 1628,
+      "total_rows": 1000,
+      "percentage": 162.8,
+      "last_updated": "2026-01-06T21:33:44.303343"
+    },
+    "WFAPPTOOLBAR": {
+      "rows_migrated": 14,
+      "total_rows": 14,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:33:46.666642"
+    },
+    "WFASGNGROUP": {
+      "rows_migrated": 2168,
+      "total_rows": 1000,
+      "percentage": 216.8,
+      "last_updated": "2026-01-06T21:33:48.596474"
+    },
+    "WFASSIGNMENT": {
+      "rows_migrated": 6546,
+      "total_rows": 1000,
+      "percentage": 654.6,
+      "last_updated": "2026-01-06T21:34:01.058178"
+    },
+    "WFCALLSTACK": {
+      "rows_migrated": 6591,
+      "total_rows": 1000,
+      "percentage": 659.1,
+      "last_updated": "2026-01-06T21:34:03.860474"
+    },
+    "WFCONDITION": {
+      "rows_migrated": 415,
+      "total_rows": 415,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:34:04.784115"
+    },
+    "WFINPUT": {
+      "rows_migrated": 39,
+      "total_rows": 39,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:34:06.433444"
+    },
+    "WFINSTANCE": {
+      "rows_migrated": 3440,
+      "total_rows": 1000,
+      "percentage": 344.0,
+      "last_updated": "2026-01-06T21:34:09.511156"
+    },
+    "WFINTERACTION": {
+      "rows_migrated": 169,
+      "total_rows": 169,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:34:10.710145"
+    },
+    "WFNODE": {
+      "rows_migrated": 1037,
+      "total_rows": 1000,
+      "percentage": 103.7,
+      "last_updated": "2026-01-06T21:34:13.339598"
+    },
+    "WFNOTIFICATION": {
+      "rows_migrated": 344,
+      "total_rows": 344,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:34:15.142939"
+    },
+    "WFPROCESS": {
+      "rows_migrated": 70,
+      "total_rows": 70,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:34:16.441804"
+    },
+    "WFREVISION": {
+      "rows_migrated": 144,
+      "total_rows": 144,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:34:17.227302"
+    },
+    "WFSTART": {
+      "rows_migrated": 70,
+      "total_rows": 70,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:34:17.818836"
+    },
+    "WFSTOP": {
+      "rows_migrated": 83,
+      "total_rows": 83,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:34:18.359494"
+    },
+    "WFSUBPROCESS": {
+      "rows_migrated": 22,
+      "total_rows": 22,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:34:18.942926"
+    },
+    "WFTASK": {
+      "rows_migrated": 236,
+      "total_rows": 236,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:34:19.519875"
+    },
+    "WFTRANSACTION": {
+      "rows_migrated": 19611,
+      "total_rows": 1000,
+      "percentage": 1961.1,
+      "last_updated": "2026-01-06T21:34:34.643554"
+    },
+    "WFWAITLIST": {
+      "rows_migrated": 4,
+      "total_rows": 4,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:34:36.104132"
+    },
+    "WOANCESTOR": {
+      "rows_migrated": 1122113,
+      "total_rows": 1000,
+      "percentage": 112211.3,
+      "last_updated": "2026-01-06T21:43:47.615257"
+    },
+    "WOMETER": {
+      "rows_migrated": 6093,
+      "total_rows": 1000,
+      "percentage": 609.3,
+      "last_updated": "2026-01-06T21:43:57.561382"
+    },
+    "WOOWNERHISTORY": {
+      "rows_migrated": 104446,
+      "total_rows": 1000,
+      "percentage": 10444.6,
+      "last_updated": "2026-01-06T21:45:11.157389"
+    },
+    "WORKCENTERTEMPLATE": {
+      "rows_migrated": 9,
+      "total_rows": 9,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:45:14.605041"
+    },
+    "WORKLOG": {
+      "rows_migrated": 128,
+      "total_rows": 128,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T21:45:15.568406"
+    },
+    "WORKORDER": {
+      "rows_migrated": 577498,
+      "total_rows": 1000,
+      "percentage": 57749.8,
+      "last_updated": "2026-01-06T22:13:08.355389"
+    },
+    "WORKORDERSPEC": {
+      "rows_migrated": 6,
+      "total_rows": 6,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T22:13:08.871388"
+    },
+    "WORKPERIOD": {
+      "rows_migrated": 236,
+      "total_rows": 236,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T22:13:09.519888"
+    },
+    "WORKPRIORITY": {
+      "rows_migrated": 10,
+      "total_rows": 10,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T22:13:09.795178"
+    },
+    "WORKTYPE": {
+      "rows_migrated": 17,
+      "total_rows": 17,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T22:13:10.851956"
+    },
+    "WORKVIEW": {
+      "rows_migrated": 583690,
+      "total_rows": 1000,
+      "percentage": 58369.0,
+      "last_updated": "2026-01-06T22:22:37.604250"
+    },
+    "WOSERVICEADDRESS": {
+      "rows_migrated": 577499,
+      "total_rows": 1000,
+      "percentage": 57749.9,
+      "last_updated": "2026-01-06T22:26:51.290775"
+    },
+    "WOSTATUS": {
+      "rows_migrated": 1850962,
+      "total_rows": 1000,
+      "percentage": 185096.2,
+      "last_updated": "2026-01-06T22:42:43.315286"
+    },
+    "WPEDITSETTING": {
+      "rows_migrated": 6,
+      "total_rows": 6,
+      "percentage": 100.0,
+      "last_updated": "2026-01-06T22:42:45.817025"
+    },
+    "WPITEM": {
+      "rows_migrated": 18491,
+      "total_rows": 1000,
+      "percentage": 1849.1,
+      "last_updated": "2026-01-06T22:43:00.121196"
+    },
+    "WPLABOR": {
+      "rows_migrated": 63732,
+      "total_rows": 1000,
+      "percentage": 6373.2,
+      "last_updated": "2026-01-06T22:43:36.703506"
+    },
+    "ZFRACAS": {
+      "rows_migrated": 35478,
+      "total_rows": 1000,
+      "percentage": 3547.8,
+      "last_updated": "2026-01-06T22:43:57.176670"
+    }
+  },
+  "last_updated": "2026-01-06T22:43:57.176690"
+}

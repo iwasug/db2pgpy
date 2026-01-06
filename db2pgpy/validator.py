@@ -8,15 +8,20 @@ from db2pgpy.connectors.postgres import PostgresConnector
 class Validator:
     """Validate data migration between DB2 and PostgreSQL."""
     
-    def __init__(self, db2_connector: DB2Connector, pg_connector: PostgresConnector):
+    def __init__(self, db2_connector: DB2Connector, pg_connector: PostgresConnector, 
+                 db2_schema: str = "MAXIMO", pg_schema: str = "public"):
         """Initialize Validator.
         
         Args:
             db2_connector: DB2 database connector
             pg_connector: PostgreSQL database connector
+            db2_schema: DB2 schema name (default: MAXIMO)
+            pg_schema: PostgreSQL schema name (default: public)
         """
         self.db2_connector = db2_connector
         self.pg_connector = pg_connector
+        self.db2_schema = db2_schema
+        self.pg_schema = pg_schema
     
     def validate_row_counts(self, table_name: str) -> Tuple[bool, int, int]:
         """Validate row counts match between DB2 and PostgreSQL.
@@ -27,8 +32,8 @@ class Validator:
         Returns:
             Tuple of (is_valid, db2_count, pg_count)
         """
-        db2_count = self.db2_connector.get_table_row_count(table_name)
-        pg_count = self.pg_connector.get_table_row_count(table_name)
+        db2_count = self.db2_connector.get_table_row_count(table_name, self.db2_schema)
+        pg_count = self.pg_connector.get_table_row_count(table_name, self.pg_schema)
         
         is_valid = db2_count == pg_count
         

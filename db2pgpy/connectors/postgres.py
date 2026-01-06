@@ -23,35 +23,35 @@ class PostgresConnector:
         self.conn = None
         self.logger = setup_logger("postgres_connector")
     
-    def _get_connection_string(self) -> str:
+    def _get_connection_params(self) -> Dict[str, Any]:
         """
-        Build connection string from config.
+        Build connection parameters from config.
         
         Returns:
-            PostgreSQL connection string
+            PostgreSQL connection parameters dictionary
         """
-        parts = []
+        params = {}
         if "host" in self.config:
-            parts.append(f"host={self.config['host']}")
+            params["host"] = self.config["host"]
         if "port" in self.config:
-            parts.append(f"port={self.config['port']}")
+            params["port"] = self.config["port"]
         if "database" in self.config:
-            parts.append(f"database={self.config['database']}")
+            params["dbname"] = self.config["database"]  # psycopg2 uses 'dbname' not 'database'
         if "user" in self.config:
-            parts.append(f"user={self.config['user']}")
+            params["user"] = self.config["user"]
         if "password" in self.config:
-            parts.append(f"password={self.config['password']}")
+            params["password"] = self.config["password"]
         
-        return " ".join(parts)
+        return params
     
     def connect(self):
         """Establish connection to PostgreSQL with retry logic."""
-        conn_str = self._get_connection_string()
+        conn_params = self._get_connection_params()
         
         for attempt in range(1, self.max_retries + 1):
             try:
                 self.logger.info(f"Connecting to PostgreSQL (attempt {attempt}/{self.max_retries})...")
-                self.conn = psycopg2.connect(conn_str)
+                self.conn = psycopg2.connect(**conn_params)
                 self.logger.info("Successfully connected to PostgreSQL")
                 return
             except Exception as e:
@@ -84,9 +84,13 @@ class PostgresConnector:
         if not self.conn:
             raise RuntimeError("Not connected to database")
         
-        with self.conn.cursor() as cursor:
-            cursor.execute(query, params)
-            return cursor.fetchall()
+        try:
+            with self.conn.cursor() as cursor:
+                cursor.execute(query, params)
+                return cursor.fetchall()
+        except Exception as e:
+            self.conn.rollback()
+            raise
     
     def execute_update(self, query: str, params: Optional[Tuple] = None) -> int:
         """
@@ -102,10 +106,32 @@ class PostgresConnector:
         if not self.conn:
             raise RuntimeError("Not connected to database")
         
-        with self.conn.cursor() as cursor:
-            cursor.execute(query, params)
-            self.conn.commit()
-            return cursor.rowcount
+        try:
+            with self.conn.cursor() as cursor:
+                cursor.execute(query, params)
+                self.conn.commit()
+                return cursor.rowcount
+        except Exception as e:
+            self.conn.rollback()
+            raise
+    
+    def execute_ddl(self, ddl: str) -> None:
+        """
+        Execute a DDL statement (CREATE, ALTER, DROP, etc.).
+        
+        Args:
+            ddl: DDL statement to execute
+        """
+        if not self.conn:
+            raise RuntimeError("Not connected to database")
+        
+        try:
+            with self.conn.cursor() as cursor:
+                cursor.execute(ddl)
+                self.conn.commit()
+        except Exception as e:
+            self.conn.rollback()
+            raise
     
     def execute_batch(self, query: str, data: List[Tuple]) -> int:
         """
@@ -129,6 +155,41 @@ class PostgresConnector:
             self.conn.commit()
         
         return total_rows
+    
+    def bulk_insert(self, table_name: str, data: List[Tuple]) -> int:
+        """
+        Bulk insert data into a table.
+        
+        Args:
+            table_name: Name of the table
+            data: List of row tuples
+            
+        Returns:
+            Number of rows inserted
+        """
+        if not self.conn:
+            raise RuntimeError("Not connected to database")
+        
+        if not data:
+            return 0
+        
+        try:
+            # Build INSERT query with placeholders
+            num_columns = len(data[0])
+            placeholders = ', '.join(['%s'] * num_columns)
+            insert_query = f'INSERT INTO "{table_name}" VALUES ({placeholders})'
+            
+            total_rows = 0
+            with self.conn.cursor() as cursor:
+                for row in data:
+                    cursor.execute(insert_query, row)
+                    total_rows += cursor.rowcount
+                self.conn.commit()
+            
+            return total_rows
+        except Exception as e:
+            self.conn.rollback()
+            raise
     
     def table_exists(self, table_name: str, schema: str = "public") -> bool:
         """

@@ -105,6 +105,20 @@ class ProgressTracker:
         }
         self.save()
     
+    def update_progress(self, table_name: str, rows_transferred: int):
+        """
+        Update progress for a table (simplified interface).
+        
+        Args:
+            table_name: Name of the table
+            rows_transferred: Number of rows transferred so far
+        """
+        # Get existing progress or create new entry
+        existing = self.state["tables"].get(table_name, {})
+        total_rows = existing.get("total_rows", rows_transferred)
+        
+        self.update_table_progress(table_name, rows_transferred, total_rows)
+    
     def get_table_progress(self, table_name: str) -> Optional[Dict[str, Any]]:
         """
         Get progress for a specific table.

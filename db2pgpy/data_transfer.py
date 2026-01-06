@@ -11,17 +11,19 @@ class DataTransfer:
     """Transfer data from DB2 to PostgreSQL in batches."""
     
     def __init__(self, db2_connector: DB2Connector, pg_connector: PostgresConnector, 
-                 batch_size: int = 1000):
+                 batch_size: int = 1000, schema: str = "MAXIMO"):
         """Initialize DataTransfer.
         
         Args:
             db2_connector: DB2 database connector
             pg_connector: PostgreSQL database connector
             batch_size: Number of rows per batch
+            schema: Source schema name (default: MAXIMO)
         """
         self.db2_connector = db2_connector
         self.pg_connector = pg_connector
         self.batch_size = batch_size
+        self.schema = schema
     
     def transfer_table(self, table_name: str, progress_tracker: ProgressTracker) -> Dict[str, Any]:
         """Transfer a single table from DB2 to PostgreSQL.
@@ -37,7 +39,7 @@ class DataTransfer:
         total_rows = 0
         
         # Fetch data in batches from DB2
-        batches = self.db2_connector.fetch_table_data(table_name, self.batch_size)
+        batches = self.db2_connector.fetch_table_data(table_name, self.schema, self.batch_size)
         
         for batch in batches:
             if batch:

@@ -122,7 +122,27 @@ def validate(config):
     type=int,
     help="Number of parallel workers (default: 1)",
 )
-def migrate(config, schema_only, data_only, tables, batch_size, parallel):
+@click.option(
+    "--no-sequences",
+    is_flag=True,
+    help="Disable automatic sequence creation for primary keys",
+)
+@click.option(
+    "--drop-existing",
+    is_flag=True,
+    help="Drop existing tables before migration (USE WITH CAUTION!)",
+)
+@click.option(
+    "--skip-existing",
+    is_flag=True,
+    help="Skip tables that already exist (default behavior)",
+)
+@click.option(
+    "--force-data",
+    is_flag=True,
+    help="Force data transfer even for existing tables (overwrite/append data)",
+)
+def migrate(config, schema_only, data_only, tables, batch_size, parallel, no_sequences, drop_existing, skip_existing, force_data):
     """Run full migration from DB2 to PostgreSQL."""
     logger = setup_logger("migrate", level="INFO")
     
@@ -171,11 +191,13 @@ def migrate(config, schema_only, data_only, tables, batch_size, parallel):
         logger.info("✓ Connected to PostgreSQL")
         
         # Setup migration components
+        db2_schema = db2_config.get('schema', db2_config.get('database'))
+        pg_schema = pg_config.get('schema', 'public')
         schema_extractor = SchemaExtractor(db2_connector)
         type_converter = TypeConverter()
         schema_converter = SchemaConverter(type_converter)
-        data_transfer = DataTransfer(db2_connector, pg_connector, batch_size)
-        validator = Validator(db2_connector, pg_connector)
+        data_transfer = DataTransfer(db2_connector, pg_connector, batch_size, schema=db2_schema)
+        validator = Validator(db2_connector, pg_connector, db2_schema=db2_schema, pg_schema=pg_schema)
         progress_tracker = ProgressTracker('.db2pgpy_state.json')
         
         # Create migrator
@@ -187,7 +209,10 @@ def migrate(config, schema_only, data_only, tables, batch_size, parallel):
             db2_connector=db2_connector,
             pg_connector=pg_connector,
             progress_tracker=progress_tracker,
-            logger=logger
+            logger=logger,
+            create_sequences=not no_sequences,
+            drop_existing=drop_existing,
+            skip_data_if_exists=not force_data  # If force_data=True, don't skip
         )
         
         # Prepare migration configuration
@@ -196,9 +221,24 @@ def migrate(config, schema_only, data_only, tables, batch_size, parallel):
             'validate': config_data.get('validation', {}).get('enabled', True)
         }
         
+        # If no tables specified, discover all tables from DB2 schema
         if not migration_config['tables']:
-            logger.error("No tables specified for migration")
-            logger.error("Specify tables using --tables or in config file")
+            logger.info("No tables specified, discovering tables from DB2 schema...")
+            schema = db2_config.get('schema', db2_config.get('database'))
+            discovered_tables = db2_connector.get_tables(schema)
+            
+            # Apply exclusions if configured
+            exclude_tables = config_data.get('migration', {}).get('exclude_tables', [])
+            if exclude_tables:
+                discovered_tables = [t for t in discovered_tables if t not in exclude_tables]
+                logger.info(f"Excluding {len(exclude_tables)} tables from migration")
+            
+            migration_config['tables'] = discovered_tables
+            logger.info(f"Discovered {len(discovered_tables)} tables in schema '{schema}'")
+        
+        if not migration_config['tables']:
+            logger.error("No tables found for migration")
+            logger.error("Check that the DB2 schema contains tables")
             sys.exit(1)
         
         logger.info(f"Migrating {len(migration_config['tables'])} tables")

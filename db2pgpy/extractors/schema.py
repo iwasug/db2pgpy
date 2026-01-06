@@ -25,7 +25,7 @@ class SchemaExtractor:
             Dictionary with columns, types, nullable, defaults
         """
         query = f"""
-            SELECT COLNAME, TYPENAME, NULLS, DEFAULT, LENGTH
+            SELECT COLNAME, TYPENAME, NULLS, DEFAULT, LENGTH, IDENTITY
             FROM SYSCAT.COLUMNS
             WHERE TABNAME = '{table_name}'
             ORDER BY COLNO
@@ -40,7 +40,8 @@ class SchemaExtractor:
                 'type': row['TYPENAME'],
                 'nullable': row['NULLS'] == 'Y',
                 'default': row['DEFAULT'],
-                'length': row.get('LENGTH')
+                'length': row.get('LENGTH'),
+                'is_identity': row.get('IDENTITY') == 'Y'
             })
         
         return {'columns': columns}
@@ -79,11 +80,20 @@ class SchemaExtractor:
         """
         query = f"""
             SELECT 
-                r.CONSTNAME, k.COLNAME, r.REFTABNAME, k.REFCOLNAME
+                r.CONSTNAME, 
+                fk.COLNAME,
+                r.REFTABNAME,
+                r.REFKEYNAME,
+                pk.COLNAME as REFCOLNAME
             FROM SYSCAT.REFERENCES r
-            JOIN SYSCAT.KEYCOLUSE k ON r.CONSTNAME = k.CONSTNAME
+            JOIN SYSCAT.KEYCOLUSE fk 
+                ON r.CONSTNAME = fk.CONSTNAME 
+                AND r.TABNAME = fk.TABNAME
+            JOIN SYSCAT.KEYCOLUSE pk 
+                ON r.REFKEYNAME = pk.CONSTNAME 
+                AND fk.COLSEQ = pk.COLSEQ
             WHERE r.TABNAME = '{table_name}'
-            ORDER BY r.CONSTNAME, k.COLSEQ
+            ORDER BY r.CONSTNAME, fk.COLSEQ
         """
         
         rows = self.connector.execute_query(query)
