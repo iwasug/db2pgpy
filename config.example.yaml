@@ -1,0 +1,52 @@
+# DB2 to PostgreSQL Migration Configuration Example
+# Copy this file to config.yaml and adjust values for your environment
+
+# DB2 source database connection
+db2:
+  host: localhost
+  port: 50000
+  database: SAMPLE
+  user: db2admin
+  password: your_db2_password
+  schema: DB2INST1  # Optional: specific schema to migrate
+  ssl: false  # Optional: use SSL connection (default: false)
+  timeout: 30  # Optional: connection timeout in seconds (default: 30)
+
+# PostgreSQL target database connection
+postgresql:
+  host: localhost
+  port: 5432
+  database: migrated_db
+  user: postgres
+  password: your_pg_password
+  schema: public  # Optional: target schema (default: public)
+  ssl: false  # Optional: use SSL connection (default: false)
+  timeout: 30  # Optional: connection timeout in seconds (default: 30)
+
+# Migration process settings
+migration:
+  mode: full  # Options: full, schema-only, data-only (default: full)
+  batch_size: 1000  # Number of rows to insert per batch (default: 1000)
+  continue_on_error: false  # Continue migration if errors occur (default: false)
+  parallel_workers: 1  # Number of parallel workers for data migration (default: 1)
+  tables: []  # Optional: specific tables to migrate (empty = all tables)
+  exclude_tables: []  # Optional: tables to exclude from migration
+
+# Resume capability for interrupted migrations
+resume:
+  enabled: true  # Enable checkpoint/resume functionality (default: true)
+  checkpoint_file: .db2pgpy_checkpoint.json  # Checkpoint file location
+
+# Logging configuration
+logging:
+  level: INFO  # Options: DEBUG, INFO, WARNING, ERROR, CRITICAL (default: INFO)
+  file: db2pgpy.log  # Log file path (default: db2pgpy.log)
+  console: true  # Enable console output (default: true)
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+
+# Validation settings
+validation:
+  enabled: true  # Enable post-migration validation (default: true)
+  row_count: true  # Validate row counts match (default: true)
+  data_sampling: true  # Sample and compare data (default: true)
+  sample_size: 100  # Number of rows to sample per table (default: 100)
