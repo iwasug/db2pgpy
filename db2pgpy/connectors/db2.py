@@ -82,6 +82,29 @@ class DB2Connector:
             self.conn = None
             self.logger.info("Disconnected from DB2")
     
+    def execute_query(self, query: str) -> List[Dict[str, Any]]:
+        """Execute a query and return results as list of dictionaries.
+        
+        Args:
+            query: SQL query to execute
+            
+        Returns:
+            List of rows as dictionaries
+        """
+        if not self.conn:
+            raise RuntimeError("Not connected to database")
+        
+        stmt = ibm_db.exec_immediate(self.conn, query)
+        results = []
+        
+        while True:
+            row = ibm_db.fetch_assoc(stmt)
+            if not row:
+                break
+            results.append(row)
+        
+        return results
+    
     def get_tables(self, schema: str) -> List[str]:
         """
         Get list of tables in a schema.
