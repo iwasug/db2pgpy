@@ -196,3 +196,52 @@ class Config:
         for field_name in required_fields:
             if field_name not in data or data[field_name] is None:
                 raise ValueError(f"Missing required field: {section}.{field_name}")
+
+
+def load_config(config_path: str) -> dict:
+    """
+    Load configuration from YAML file as dictionary.
+    
+    Args:
+        config_path: Path to configuration file
+        
+    Returns:
+        Dictionary with configuration data
+    """
+    if not os.path.exists(config_path):
+        raise FileNotFoundError(f"Configuration file not found: {config_path}")
+    
+    with open(config_path, 'r') as f:
+        return yaml.safe_load(f)
+
+
+def validate_config(config_data: dict) -> List[str]:
+    """
+    Validate configuration data.
+    
+    Args:
+        config_data: Configuration dictionary
+        
+    Returns:
+        List of validation error messages (empty if valid)
+    """
+    errors = []
+    
+    # Check DB2 configuration
+    if 'db2' not in config_data:
+        errors.append("Missing 'db2' section")
+    else:
+        for field in ['host', 'port', 'database', 'user', 'password']:
+            if field not in config_data['db2']:
+                errors.append(f"Missing required field: db2.{field}")
+    
+    # Check PostgreSQL configuration
+    if 'postgres' not in config_data and 'postgresql' not in config_data:
+        errors.append("Missing 'postgres' or 'postgresql' section")
+    else:
+        pg_section = 'postgres' if 'postgres' in config_data else 'postgresql'
+        for field in ['host', 'port', 'database', 'user', 'password']:
+            if field not in config_data[pg_section]:
+                errors.append(f"Missing required field: {pg_section}.{field}")
+    
+    return errors

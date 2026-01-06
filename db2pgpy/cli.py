@@ -4,6 +4,15 @@ import sys
 from pathlib import Path
 from .config import load_config, validate_config
 from .logger import setup_logger
+from .connectors.db2 import DB2Connector
+from .connectors.postgres import PostgresConnector
+from .extractors.schema import SchemaExtractor
+from .converters.schema import SchemaConverter
+from .converters.types import TypeConverter
+from .data_transfer import DataTransfer
+from .validator import Validator
+from .migrator import Migrator
+from .progress import ProgressTracker
 from . import __version__
 
 
@@ -43,10 +52,33 @@ def validate(config):
         
         logger.info("✓ Configuration is valid")
         
-        # TODO: Test database connections
-        logger.info("Database connection tests not yet implemented")
+        # Test database connections
+        logger.info("Testing database connections...")
         
-        logger.info("Validation completed successfully")
+        try:
+            # Test DB2 connection
+            db2_config = config_data['db2']
+            db2_conn = DB2Connector(config=db2_config)
+            db2_conn.connect()
+            logger.info("✓ DB2 connection successful")
+            db2_conn.disconnect()
+        except Exception as e:
+            logger.error(f"✗ DB2 connection failed: {e}")
+            sys.exit(1)
+        
+        try:
+            # Test PostgreSQL connection
+            pg_key = 'postgres' if 'postgres' in config_data else 'postgresql'
+            pg_config = config_data[pg_key]
+            pg_conn = PostgresConnector(config=pg_config)
+            pg_conn.connect()
+            logger.info("✓ PostgreSQL connection successful")
+            pg_conn.disconnect()
+        except Exception as e:
+            logger.error(f"✗ PostgreSQL connection failed: {e}")
+            sys.exit(1)
+        
+        logger.info("✓ Validation completed successfully")
         
     except Exception as e:
         logger.error(f"Validation failed: {e}")
@@ -107,31 +139,93 @@ def migrate(config, schema_only, data_only, tables, batch_size, parallel):
                 logger.error(f"  - {error}")
             sys.exit(1)
         
-        logger.info("Configuration validated successfully")
+        logger.info("✓ Configuration validated successfully")
         
-        # Migration options
+        # Determine migration mode
         if schema_only and data_only:
             logger.error("Cannot specify both --schema-only and --data-only")
             sys.exit(1)
         
         if schema_only:
+            mode = 'schema_only'
             logger.info("Migration mode: Schema only")
         elif data_only:
+            mode = 'data_only'
             logger.info("Migration mode: Data only")
         else:
+            mode = 'full'
             logger.info("Migration mode: Full (schema + data)")
         
-        if tables:
-            logger.info(f"Migrating specific tables: {', '.join(tables)}")
+        # Setup database connections
+        db2_config = config_data['db2']
+        pg_key = 'postgres' if 'postgres' in config_data else 'postgresql'
+        pg_config = config_data[pg_key]
         
+        logger.info("Connecting to databases...")
+        db2_connector = DB2Connector(config=db2_config)
+        db2_connector.connect()
+        logger.info("✓ Connected to DB2")
+        
+        pg_connector = PostgresConnector(config=pg_config)
+        pg_connector.connect()
+        logger.info("✓ Connected to PostgreSQL")
+        
+        # Setup migration components
+        schema_extractor = SchemaExtractor(db2_connector)
+        type_converter = TypeConverter()
+        schema_converter = SchemaConverter(type_converter)
+        data_transfer = DataTransfer(db2_connector, pg_connector, batch_size)
+        validator = Validator(db2_connector, pg_connector)
+        progress_tracker = ProgressTracker('.db2pgpy_state.json')
+        
+        # Create migrator
+        migrator = Migrator(
+            schema_extractor=schema_extractor,
+            schema_converter=schema_converter,
+            data_transfer=data_transfer,
+            validator=validator,
+            db2_connector=db2_connector,
+            pg_connector=pg_connector,
+            progress_tracker=progress_tracker,
+            logger=logger
+        )
+        
+        # Prepare migration configuration
+        migration_config = {
+            'tables': list(tables) if tables else config_data.get('migration', {}).get('tables', []),
+            'validate': config_data.get('validation', {}).get('enabled', True)
+        }
+        
+        if not migration_config['tables']:
+            logger.error("No tables specified for migration")
+            logger.error("Specify tables using --tables or in config file")
+            sys.exit(1)
+        
+        logger.info(f"Migrating {len(migration_config['tables'])} tables")
         logger.info(f"Batch size: {batch_size}")
         logger.info(f"Parallel workers: {parallel}")
         
-        # TODO: Implement actual migration logic
-        logger.warning("Migration implementation not yet complete")
+        # Run migration
+        logger.info("Starting migration...")
+        result = migrator.run_migration(migration_config, mode=mode)
+        
+        # Display results
+        logger.info("=" * 60)
+        logger.info("MIGRATION COMPLETED")
+        logger.info("=" * 60)
+        logger.info(f"Status: {result['status']}")
+        logger.info(f"Tables migrated: {result['tables_migrated']}")
+        logger.info(f"Total time: {result['total_time']:.2f} seconds")
+        logger.info("=" * 60)
+        
+        # Cleanup
+        db2_connector.disconnect()
+        pg_connector.disconnect()
         
     except Exception as e:
         logger.error(f"Migration failed: {e}")
+        import traceback
+        logger.error(traceback.format_exc())
         sys.exit(1)
 
 
@@ -162,15 +256,109 @@ def resume(config, state_file):
         
         logger.info(f"Loading state from {state_file}")
         
+        # Load progress tracker
+        progress_tracker = ProgressTracker(state_file)
+        summary = progress_tracker.get_summary()
+        
+        logger.info("=" * 60)
+        logger.info("MIGRATION PROGRESS")
+        logger.info("=" * 60)
+        logger.info(f"Current phase: {summary['current_phase']}")
+        logger.info(f"Completed phases: {', '.join(summary['completed_phases']) if summary['completed_phases'] else 'None'}")
+        logger.info(f"Tables: {summary['completed_tables']}/{summary['total_tables']} completed")
+        logger.info(f"Rows: {summary['migrated_rows']}/{summary['total_rows']} migrated")
+        logger.info(f"Overall progress: {summary['overall_percentage']:.2f}%")
+        logger.info(f"Last updated: {summary['last_updated']}")
+        logger.info("=" * 60)
+        
         # Load configuration
         logger.info(f"Loading configuration from {config}")
         config_data = load_config(config)
         
-        # TODO: Implement resume logic
-        logger.warning("Resume implementation not yet complete")
+        # Validate configuration
+        errors = validate_config(config_data)
+        if errors:
+            logger.error("Configuration validation failed")
+            for error in errors:
+                logger.error(f"  - {error}")
+            sys.exit(1)
+        
+        # Setup database connections
+        db2_config = config_data['db2']
+        pg_key = 'postgres' if 'postgres' in config_data else 'postgresql'
+        pg_config = config_data[pg_key]
+        
+        logger.info("Connecting to databases...")
+        db2_connector = DB2Connector(config=db2_config)
+        db2_connector.connect()
+        logger.info("✓ Connected to DB2")
+        
+        pg_connector = PostgresConnector(config=pg_config)
+        pg_connector.connect()
+        logger.info("✓ Connected to PostgreSQL")
+        
+        # Setup migration components
+        schema_extractor = SchemaExtractor(db2_connector)
+        type_converter = TypeConverter()
+        schema_converter = SchemaConverter(type_converter)
+        data_transfer = DataTransfer(db2_connector, pg_connector, 
+                                     config_data.get('migration', {}).get('batch_size', 1000))
+        validator = Validator(db2_connector, pg_connector)
+        
+        # Create migrator
+        migrator = Migrator(
+            schema_extractor=schema_extractor,
+            schema_converter=schema_converter,
+            data_transfer=data_transfer,
+            validator=validator,
+            db2_connector=db2_connector,
+            pg_connector=pg_connector,
+            progress_tracker=progress_tracker,
+            logger=logger
+        )
+        
+        # Determine which tables still need migration
+        all_tables = config_data.get('migration', {}).get('tables', [])
+        table_progress = progress_tracker.get_all_table_progress()
+        
+        # Filter to incomplete tables
+        incomplete_tables = [
+            table for table in all_tables
+            if table not in table_progress or 
+            table_progress[table]['rows_migrated'] < table_progress[table]['total_rows']
+        ]
+        
+        if not incomplete_tables:
+            logger.info("✓ All tables have been migrated")
+            logger.info("Nothing to resume")
+        else:
+            logger.info(f"Resuming migration for {len(incomplete_tables)} remaining tables")
+            
+            migration_config = {
+                'tables': incomplete_tables,
+                'validate': config_data.get('validation', {}).get('enabled', True)
+            }
+            
+            # Run migration
+            result = migrator.run_migration(migration_config, mode='full')
+            
+            # Display results
+            logger.info("=" * 60)
+            logger.info("RESUMED MIGRATION COMPLETED")
+            logger.info("=" * 60)
+            logger.info(f"Status: {result['status']}")
+            logger.info(f"Tables migrated: {result['tables_migrated']}")
+            logger.info(f"Total time: {result['total_time']:.2f} seconds")
+            logger.info("=" * 60)
+        
+        # Cleanup
+        db2_connector.disconnect()
+        pg_connector.disconnect()
         
     except Exception as e:
         logger.error(f"Resume failed: {e}")
+        import traceback
+        logger.error(traceback.format_exc())
         sys.exit(1)
 
 
