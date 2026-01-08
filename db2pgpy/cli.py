@@ -402,6 +402,128 @@ def resume(config, state_file):
         sys.exit(1)
 
 
+@cli.command()
+@click.option(
+    "--config",
+    "-c",
+    required=True,
+    type=click.Path(exists=True),
+    help="Path to configuration YAML file",
+)
+@click.option(
+    "--tables",
+    "-t",
+    multiple=True,
+    help="Specific tables to sync sequences for (can be specified multiple times). If not specified, syncs all sequences.",
+)
+@click.option(
+    "--schema",
+    "-s",
+    default="public",
+    help="PostgreSQL schema name (default: public)",
+)
+def sync_sequences(config, tables, schema):
+    """Synchronize PostgreSQL sequences with table data (no migration).
+    
+    This command updates existing sequences to match the maximum ID values
+    in their associated tables, preventing conflicts when inserting new rows.
+    
+    Use this when:
+    - Data was inserted with explicit IDs (bypassing sequences)
+    - Sequences are out of sync after manual data modifications
+    - You need to fix sequence values without re-running migration
+    
+    Examples:
+    
+        # Sync all sequences in public schema
+        db2pgpy sync-sequences --config config.yaml
+        
+        # Sync sequences for specific tables only
+        db2pgpy sync-sequences --config config.yaml --tables CUSTOMERS --tables ORDERS
+        
+        # Sync sequences in a different schema
+        db2pgpy sync-sequences --config config.yaml --schema myschema
+    """
+    logger = setup_logger("sync-sequences", level="INFO")
+    
+    try:
+        # Load configuration
+        logger.info(f"Loading configuration from {config}")
+        config_data = load_config(config)
+        
+        # Validate configuration
+        errors = validate_config(config_data)
+        if errors:
+            logger.error("Configuration validation failed")
+            for error in errors:
+                logger.error(f"  - {error}")
+            sys.exit(1)
+        
+        logger.info("✓ Configuration validated successfully")
+        
+        # Setup PostgreSQL connection only (no DB2 needed)
+        pg_key = 'postgres' if 'postgres' in config_data else 'postgresql'
+        pg_config = config_data[pg_key]
+        
+        logger.info("Connecting to PostgreSQL...")
+        pg_connector = PostgresConnector(config=pg_config)
+        pg_connector.connect()
+        logger.info("✓ Connected to PostgreSQL")
+        
+        # Create a mock DB2 connector (not used for sync-only operation)
+        from unittest.mock import Mock
+        db2_connector = Mock()
+        
+        # Create sequence manager
+        from .sequence_manager import SequenceManager
+        sequence_manager = SequenceManager(db2_connector, pg_connector)
+        
+        # Determine which tables to sync
+        tables_list = list(tables) if tables else None
+        
+        if tables_list:
+            logger.info(f"Syncing sequences for {len(tables_list)} specified table(s)")
+        else:
+            logger.info(f"Syncing all sequences in schema '{schema}'")
+        
+        # Sync sequences
+        logger.info("=" * 60)
+        logger.info("STARTING SEQUENCE SYNCHRONIZATION")
+        logger.info("=" * 60)
+        
+        stats = sequence_manager.sync_all_sequences_in_schema(
+            schema=schema,
+            tables=tables_list
+        )
+        
+        # Display results
+        logger.info("=" * 60)
+        logger.info("SEQUENCE SYNCHRONIZATION COMPLETED")
+        logger.info("=" * 60)
+        logger.info(f"Total sequences found: {stats['total_sequences']}")
+        logger.info(f"Successfully synced: {stats['synced']}")
+        logger.info(f"Failed: {stats['failed']}")
+        logger.info(f"Skipped: {stats['skipped']}")
+        logger.info("=" * 60)
+        
+        if stats['failed'] > 0:
+            logger.warning(f"⚠ {stats['failed']} sequence(s) failed to sync. Check logs for details.")
+            sys.exit(1)
+        elif stats['synced'] == 0:
+            logger.warning("⚠ No sequences were synced. Check that sequences exist in the specified schema/tables.")
+        else:
+            logger.info(f"✓ Successfully synchronized {stats['synced']} sequence(s)")
+        
+        # Cleanup
+        pg_connector.disconnect()
+        
+    except Exception as e:
+        logger.error(f"Sequence synchronization failed: {e}")
+        import traceback
+        logger.error(traceback.format_exc())
+        sys.exit(1)
+
+
 def main():
     """Entry point for the CLI."""
     cli()

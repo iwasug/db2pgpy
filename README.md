@@ -204,6 +204,27 @@ VALUES ('John Doe', 'john@example.com');
 2. Falls back to MAX(column_value) from the table
 3. Sets start value = max_value + 1
 
+**Automatic Sequence Synchronization**:
+After data insertion, sequences are automatically synchronized to prevent conflicts:
+- The tool queries `MAX(column)` from the PostgreSQL table
+- Uses `setval()` to adjust the sequence to `max_value + 1`
+- This ensures the next `nextval()` won't conflict with existing data
+- Critical for migrations where data is inserted with explicit IDs
+
+**Example**:
+```sql
+-- Data inserted with explicit IDs
+INSERT INTO "CUSTOMERS" ("CUSTOMER_ID", "NAME") VALUES (1000, 'John');
+INSERT INTO "CUSTOMERS" ("CUSTOMER_ID", "NAME") VALUES (5000, 'Jane');
+
+-- Tool automatically syncs sequence
+SELECT setval('customers_customer_id_seq', 5001, false);
+
+-- Next insert will use 5001, 5002, ... (no conflicts!)
+INSERT INTO "CUSTOMERS" ("NAME") VALUES ('Bob');
+-- CUSTOMER_ID automatically assigned: 5001
+```
+
 **Disable auto-sequences** if you want to preserve original behavior:
 ```bash
 db2pgpy migrate --config config.yaml --no-sequences
@@ -267,6 +288,15 @@ db2pgpy migrate --config config.yaml --schema-only
 ```bash
 # Schema is good, just sync the data
 db2pgpy migrate --config config.yaml --data-only
+```
+
+**Manual Sequence Synchronization**:
+```bash
+# After manual data modifications, sync sequences
+db2pgpy sync-sequences --config config.yaml
+
+# Or for specific tables
+db2pgpy sync-sequences --config config.yaml --tables TABLE1 --tables TABLE2
 ```
 
 ## Configuration Options
@@ -341,6 +371,30 @@ Run the migration process.
 db2pgpy migrate --config config.yaml [OPTIONS]
 ```
 
+#### sync-sequences
+Synchronize PostgreSQL sequences with table data (without running migration).
+
+```bash
+db2pgpy sync-sequences --config config.yaml [OPTIONS]
+```
+
+**Use this when**:
+- Data was inserted with explicit IDs (bypassing sequences)
+- Sequences are out of sync after manual data modifications
+- You need to fix sequence values without re-running migration
+
+**Examples**:
+```bash
+# Sync all sequences in public schema
+db2pgpy sync-sequences --config config.yaml
+
+# Sync sequences for specific tables only
+db2pgpy sync-sequences --config config.yaml --tables CUSTOMERS --tables ORDERS
+
+# Sync sequences in a different schema
+db2pgpy sync-sequences --config config.yaml --schema myschema
+```
+
 Options:
 - `--schema-only`: Migrate schema only (no data)
 - `--data-only`: Migrate data only (assumes schema exists)
@@ -382,6 +436,43 @@ db2pgpy resume --config config.yaml [OPTIONS]
 Options:
 - `--state-file`: Path to state file (default: .db2pgpy_state.json)
 
+#### sync-sequences
+Synchronize PostgreSQL sequences with table data.
+
+```bash
+db2pgpy sync-sequences --config config.yaml [OPTIONS]
+```
+
+Options:
+- `--tables`, `-t`: Specific tables to sync (can specify multiple times). If not specified, syncs all sequences
+- `--schema`, `-s`: PostgreSQL schema name (default: public)
+
+**Use Cases**:
+
+**After Manual Data Import**:
+```bash
+# You imported data with explicit IDs
+psql -d mydb -c "COPY customers FROM 'data.csv' CSV"
+
+# Now sync the sequences
+db2pgpy sync-sequences --config config.yaml --tables CUSTOMERS
+```
+
+**After Direct SQL Inserts**:
+```bash
+# You inserted data bypassing sequences
+psql -d mydb -c "INSERT INTO orders (order_id, ...) VALUES (10000, ...)"
+
+# Sync to prevent conflicts
+db2pgpy sync-sequences --config config.yaml --tables ORDERS
+```
+
+**Periodic Maintenance**:
+```bash
+# Sync all sequences in the database
+db2pgpy sync-sequences --config config.yaml
+```
+
 ## Type Mapping
 
 See [TYPE_MAPPING.md](docs/TYPE_MAPPING.md) for complete DB2 to PostgreSQL type conversion reference.
@@ -389,6 +480,23 @@ See [TYPE_MAPPING.md](docs/TYPE_MAPPING.md) for complete DB2 to PostgreSQL type 
 ## Migration Guide
 
 See [MIGRATION_GUIDE.md](docs/MIGRATION_GUIDE.md) for step-by-step migration instructions and troubleshooting.
+
+## Migration Flow
+
+The tool follows a systematic migration flow for each table:
+
+1. **Phase 1**: Extract schema from DB2 (tables, columns, types, constraints)
+2. **Phase 2**: Convert schema to PostgreSQL DDL
+3. **Phase 3**: Create table and sequences in PostgreSQL
+   - Create table structure
+   - Create primary keys
+   - Create sequences for auto-increment columns
+4. **Phase 4**: Transfer data from DB2 to PostgreSQL
+   - Batch-based data transfer
+   - **Automatic sequence synchronization** after data insertion
+5. **Phase 5**: Validation (row counts, data integrity)
+
+**Important**: Sequences are synchronized AFTER data transfer to ensure the next auto-generated ID won't conflict with migrated data.
 
 ## Architecture
 
@@ -398,6 +506,7 @@ The tool consists of several components:
 - **Extractors**: Schema information extraction from DB2 system catalogs
 - **Converters**: Type and schema conversion from DB2 to PostgreSQL
 - **Data Transfer**: Efficient batch-based data migration
+- **Sequence Manager**: Auto-sequence creation and synchronization
 - **Validator**: Post-migration validation
 - **Progress Tracker**: Resume capability with checkpoint management
 - **Migrator**: Orchestration of the migration process

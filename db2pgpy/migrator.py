@@ -130,6 +130,11 @@ class Migrator:
                 if mode != 'schema_only':
                     self.logger.info(f"Phase 4: Transferring data for {table_name}")
                     self.data_transfer.transfer_table(table_name, self.progress_tracker)
+                    
+                    # Phase 4b: Sync sequences after data insertion
+                    if self.create_sequences and self.sequence_manager and pk_columns:
+                        self.logger.info(f"Phase 4b: Syncing sequences for {table_name}")
+                        self.sequence_manager.sync_sequences_for_table(table_name, pk_columns)
                 
                 # Phase 5: Validate (if enabled and not schema_only)
                 if mode != 'schema_only' and validate_enabled:
